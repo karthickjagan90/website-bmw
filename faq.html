@@ -1,0 +1,180 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<link rel="icon" type="image/png" href="http://www.bmwusa.com/favicon.ico">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap.min.css">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/style.css">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/font-awesome/css/font-awesome.min.css">
+<script src="https://s3.amazonaws.com/themes.limelightplatform.com/global/jquery.min.js"></script>
+<script src="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/cities_activities/style.css">
+<style>
+    .navbar-toggle {
+	border: none;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #414141;
+}
+	.nav-footer a:before {
+		content: '';
+		margin: 0;
+	}
+    @media (min-width: 993px) {
+	.header .navbar-nav {
+		margin-top: 0;
+	}
+	.header .navbar-nav li:last-child {
+		border: 2px solid #1c69d3;
+		padding: 18px 33px;
+		margin-left: 30px;
+		margin-right: 20px;
+	}
+	.header .navbar-nav li:last-child a {
+		color: #000000;
+	}
+}
+    @media (max-width: 700px) {
+        .nav-footer li {
+            padding: 0 15px;
+        }
+    }
+</style>
+<script type="text/javascript" class="limelight-web-analytics" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-web-tracker.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/pickadate/picker.min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/pickadate/classic.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/pickadate/classic.date.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/datatables/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/datatables/dataTables.bootstrap.min.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/moment.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/datetime-moment.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/bootstrap-multiselect/bootstrap-multiselect.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/bootstrap-multiselect/bootstrap-multiselect.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://js.squareup.com/v2/paymentform"></script>
+<script type="text/javascript" class="limelight-resources" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/limelight-payment.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/limelight-pickadate.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/grid-view.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/grid-view-1.00-sessions.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/form-alignment.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-utils.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-form.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-conditionals.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-payments.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/pickadate/picker.date.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-filter-condition.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/slick.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/slick-theme.min.css">
+<script type="text/javascript" class="limelight-resources" src="https://dashboard.limelightplatform.com/limelight/js/slick-carousel/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/limelight-slick.css"><div class="wrapper container-fluid" language="EN"> 
+ <div class="row"> 
+  <header class="header"> 
+   <nav class="navbar"> 
+    <div class="shell"> 
+     <div class="navbar-header" ll-section="navigation"> 
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="navbar-brand" href="/"> <span class="slogan" style="background:none;"><img ll-component="image" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/UDE-Black.png" style="visibility: visible; display: inline-block;" class=""></span> </a> 
+     </div> 
+     <div id="navbar" class="collapse navbar-collapse navbar-right"> 
+      <ul class="nav navbar-nav"> 
+       <li><a href="activites.html">Activities</a></li> 
+       <li><a href="cities.html">Cities</a></li> 
+       <li><a href="faq.html">FAQ</a></li> 
+       <li><a href="register.html">Register</a></li> 
+      </ul> 
+     </div> 
+     <!--/.nav-collapse --> 
+    </div> 
+   </nav> 
+  </header> 
+  <!-- /.header --> 
+  <div class="intro-image" ll-section="Banner"> 
+   <img ll-component="image" ll-optimalwidth="1280" ll-optimalheight="422" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/UDE Key Visual FAQ Page.jpg" alt="" style="visibility: visible;"> 
+  </div> 
+  <div class=""> 
+   <div class="intro-bg" style="background-image: url(https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/intro-1.jpg); "></div> 
+  </div> 
+  <!-- /.intro --> 
+  <section class="section-registration"> 
+   <div class="container-fluid" language="EN"> 
+    <div class="row" ll-section="content"> 
+     <div class="col-sm-10 col-sm-offset-1"> 
+      <h2 ll-component="simpleTitle" style="
+    text-align: center;
+"></h2> 
+      <h1 ll-component="simpleTitle">FAQ</h1> 
+      <div ll-component="adhocCont">
+       <p><span style="font-family:arial,helvetica,sans-serif;"><span style="color:black;"><strong>Q: How old must I be to drive?</strong><br> A: Drivers must be at least 18 years of age, with a valid license, for all activities with the exception of M vehicles and Teen Driving School. For M vehicles drivers must be at least 25 years old. Teen Driving School is for drivers under the age of 21 with a valid permit or license. Permits and licenses will be checked on site.<br> <br> <strong>Q: Are there any limitations to how many times I can drive in the Autocross?</strong><br> A: Drivers may only pre-register for one (1) Autocross session per city. Once on-site, should space be available, drivers may request to participate in one (1) additional Autocross session for a total of two (2) Autocross drives per city.<br> <br> <strong>Q: Can I bring a guest?</strong><br> A: Yes, but all drivers must preregister online in their own name. You will receive a confirmation email, once your registration is complete, to verify your preregistered activity. &nbsp;<br> <br> <strong>Q: Why can’t I preregister for Street Drives or xDrive Experience?</strong><br> A: These activities are available on a first-come, first-served basis and run continuously throughout each day. Drivers just need to check in at registration onsite to take part in this activity.&nbsp;<br> <br> <strong>Q: What does it mean if I am wait-listed?</strong><br> A: Signing up for the wait-list allows drivers to obtain driving spaces in the event that preregistered guests do not show up for their appointment. Similar to flying standby, wait-listed drivers must check in at registration at the assigned activity time and will be notified shortly thereafter if space is available. As a wait-listed guest, you are still welcome to enjoy the other onsite activities like the xDrive Experience and Street Drives.<br> <br> <strong>Q: How much does it cost?</strong><br> A: All programs are free of charge with the exception of the full-day M Car Control Clinic, which costs $750.&nbsp;<br> <br> <strong>Q: Can my family and friends ride in the car with me?</strong><br> A: Once each person registers on-site, companions of all ages may only ride along in the Street Drive program (please note that the installation of car seats is prohibited). Only registered drivers are permitted in the track activity vehicles but companions may sit in the track tent as a spectator.&nbsp;</span><span style="font-size:10.0pt;"><span style="letter-spacing:-.05pt;"> </span></span></span></p> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- /.row --> 
+   </div> 
+   <!-- /.container-fluid --> 
+  </section> 
+  <!-- /.section-registration --> 
+  <footer class="footer" ll-section="footer"> 
+   <div class="row"> 
+    <div class="col-md-8 col-md-offset-2 col-sm-12"> 
+     <div class="socials"> 
+      <ul> 
+       <li><a href="https://www.facebook.com/BMWINDIA/" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/FACEBOOK.png"></a></li> 
+       <li><a href="https://twitter.com/BMWINDIA?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/TWITTER_white.png"></a></li> 
+       <li><a href="https://www.youtube.com/user/BMWINDIA" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/YOUTUBE_white.png"></a></li> 
+       <li><a href="https://www.instagram.com/bmwusa/?hl=en" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/INSTAGRAM_white.png" style="width: 22px; height: 22px;"></a></li> 
+      </ul> 
+     </div> 
+      <nav class="nav-footer" ll-component="adhocCont">
+       &nbsp; 
+      <ul> 
+       <li><a href="activites.html" target="_blank">Activities</a></li> 
+       <li><a href="cities.html" target="_blank">Cities</a></li> 
+       <li><a href="faq.html" target="_blank">FAQ</a></li> 
+      </ul> Questions? Please call 
+      <a href="tel:1-800-558-4269" style="
+    display: initial;
+">1-800-558-4269</a> 
+     </nav> 
+     <div class="footer-outro" ll-component="adhocCont"> 
+      <a href="http://www.bmwusa.com/standard/content/privacypolicy/" target="_blank">Privacy Policy</a> 
+      <a href="https://www.bmwusa.com/" target="_blank">© 2019 BMW of North America</a> 
+     </div>
+     <!-- /.footer-outro --> 
+    </div> 
+    <!-- /.col-sm-4 col-sm-offset-4 --> 
+   </div> 
+   <!-- /.row --> 
+  </footer> 
+  <!-- /.footer --> 
+ </div> 
+ <!-- /.wrapper --> 
+</div>
+<input type="hidden" id="gaPropertyId" name="gaPropertyId" value="">
+<input type="hidden" id="gaViewId" name="gaViewId" value="">
+<script>
+		$(document).ready(function() {
+			if(!window.parent.document.getElementById("advancedHtmlContent") && $("#gaPropertyId").val()) {
+				(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+				ga("create", $("#gaPropertyId").val(), "auto");
+				ga("send", "pageview");
+			}
+		});
+	</script>
+<div class="limelight-site-tracker" style="display:none"> 
+ <input type="hidden" value="777" id="siteId"> 
+ <input type="hidden" value="//matomo.limelightplatform.com/" id="trackerUrl"> 
+ <input type="hidden" value="piwik.php" id="trackerHost"> 
+ <input type="hidden" value="faq" id="pageUrlName"> 
+</div>
+<div class="limelight-conditional-container" style="display:none"> 
+ <script type="text/javascript" id="formId"></script> 
+</div>
+<div class="limelight-carousel-container" style="display:none"> 
+ <script type="text/javascript" id="formId"></script> 
+</div>

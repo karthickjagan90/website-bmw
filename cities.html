@@ -1,0 +1,401 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<link rel="icon" type="image/png" href="http://www.bmwusa.com/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap.min.css">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/cities_activities/style.css">
+<style>
+    .navbar-toggle {
+	border: none;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #414141;
+}
+    
+    .list-waypoints li {
+        float: none;
+        display: inline-block;
+        width: auto;
+        padding: 0 24px 0;
+    }
+    @media (max-width: 992px) {
+        .list-waypoints li {
+        	margin: 0;
+        }
+    }
+
+    @media (min-width: 993px) {
+     .header .navbar-nav {
+         margin-top: 0;
+     }
+	.header .navbar-nav li:last-child {
+		border: 2px solid #1c69d3;
+		padding: 18px 33px;
+		margin-left: 30px;
+		margin-right: 20px;
+	}
+	.header .navbar-nav li:last-child a {
+		color: #000000;
+	}
+}
+    @media (max-width: 700px) {
+        .nav-footer li {
+            padding: 0 15px;
+        }
+    }
+</style>
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/font-awesome/css/font-awesome.min.css">
+<script src="https://s3.amazonaws.com/themes.limelightplatform.com/global/jquery.min.js"></script>
+<script src="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap.min.js"></script>
+<script src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/cities_activities/functions.js"></script>
+<script type="text/javascript" class="limelight-web-analytics" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-web-tracker.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/pickadate/picker.min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/pickadate/classic.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/pickadate/classic.date.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/datatables/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/datatables/dataTables.bootstrap.min.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/moment.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/datetime-moment.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/bootstrap-multiselect/bootstrap-multiselect.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/bootstrap-multiselect/bootstrap-multiselect.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://js.squareup.com/v2/paymentform"></script>
+<script type="text/javascript" class="limelight-resources" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/limelight-payment.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/limelight-pickadate.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/grid-view.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/grid-view-1.00-sessions.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/form-alignment.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-utils.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-form.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-conditionals.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-payments.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/pickadate/picker.date.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-filter-condition.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/slick.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/slick-theme.min.css">
+<script type="text/javascript" class="limelight-resources" src="https://dashboard.limelightplatform.com/limelight/js/slick-carousel/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/limelight-slick.css"><div class="wrapper container-fluid" language="EN"> 
+ <div class="row"> 
+  <header class="header"> 
+   <nav class="navbar"> 
+    <div class="shell"> 
+     <div class="navbar-header" ll-section="navigation"> 
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="navbar-brand" href="/"> <span class="slogan" style="background:none;"><img ll-component="image" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/UDE-Black.png" style="visibility: visible; display: inline-block;" class=""></span> </a> 
+     </div> 
+     <div id="navbar" class="collapse navbar-collapse navbar-right"> 
+      <ul class="nav navbar-nav"> 
+       <li><a href="activites.html">Activities</a></li> 
+       <li><a href="cities.html">Cities</a></li> 
+       <li><a href="faq.html">FAQ</a></li> 
+       <li><a href="register.html">Register</a></li> 
+      </ul> 
+     </div> 
+     <!--/.nav-collapse --> 
+    </div> 
+   </nav> 
+  </header> 
+  <!-- /.header --> 
+  <div class="main"> 
+   <div class="intro intro-secondary" style="
+    margin-bottom: 0px;
+"> 
+    <div class="row" ll-section="Banner"> 
+     <div class="col-xs-12"> 
+      <div class="intro-image"> 
+       <img ll-component="image" ll-optimalwidth="1280" ll-optimalheight="422" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/UDE Key Visual Cities Page.jpg" alt="" style="visibility: visible;"> 
+      </div> 
+      <!-- /.intro-image --> 
+      <div class="intro-content" style="
+    padding: 25px 0px;
+"> 
+       <h2 ll-component="simpleTitle" class="intro-title" style="
+    text-align: center;
+"><span style="font-size: 30px;">FIND YOUR CITY. FIND YOUR EXPERIENCE.&nbsp;</span></h2> 
+       <div ll-component="adhocCont"> 
+        <p style="text-align: center;">This year the Ultimate Driving Experience will come to the five cities below. We'll bring back favorites such as Autocross, M Car Control Clinic and Teen Driving School, along with the new and innovative activities like the xDrive Experience.</p> 
+       </div> 
+      </div> 
+      <!-- /.intro-content --> 
+     </div> 
+     <!-- /.col-xs-12 --> 
+    </div> 
+    <!-- /.row --> 
+   </div> 
+   <!-- /.intro --> 
+   <section class="section section-cities"> 
+    <div class="row" ll-section="navbar - cities"> 
+     <div class="col-xs-12"> 
+      <div class="bar" ll-component="adhocCont"> 
+       <ul class="list-waypoints scroll-fixed"> 
+        <li><a class="waypoint" href="register-coimbatore.html">Coimbatore</a></li> 
+        <li><a class="waypoint" href="notify-mumbai.html">Mumbai</a></li> 
+        <li><a class="waypoint" href="notify-bangalore.html">Bangalore</a></li> 
+        <li><a class="waypoint" href="notify-chennai.html">Chennai</a></li> 
+        <li><a class="waypoint" href="notify-kerala.html">Kerala</a></li> 
+       </ul> 
+       <!-- /.list-waypoints --> 
+      </div> 
+      <!-- /.bar --> 
+     </div> 
+     <!-- /.col-xs-12 --> 
+    </div> 
+    <!-- /.row --> 
+    <div class="row" ll-section="city 1"> 
+     <div class="col-xs-12"> 
+      <div class="city city-primary" id="city-1"> 
+       <div class="city-image"> 
+        <a href="http://udenj.eventsbmw.com"> <img ll-component="image" ll-optimalwidth="1280" ll-optimalheight="734" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/New Jersey.jpg[2]" alt="" style="visibility: visible;"></a> 
+       </div> 
+       <!-- /.city-image --> 
+       <div class="city-content"> 
+        <h3 ll-component="simpleTitle" class="city-title">COIMBATORE</h3> 
+        <!-- /.city-title --> 
+        <h6 ll-component="simpleTitle">Covai Tower<br> &nbsp;</h6> 
+        <span ll-component="adhocCont"><p><a href="https://www.google.co.in/maps/place/R+s+puram/@11.0034621,76.9523168,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba859969ec38c7d:0x2072cb422957d2cd!8m2!3d11.0034621!4d76.9545055">View on map &gt;</a><br> &nbsp;</p> </span> 
+        <div ll-component="button" class="city-actions"> 
+         <a class="btn btn-transparent btn-white registerLink" style="color: rgb(255, 255, 255);" href="register-coimbatore.html">Register Now</a> 
+        </div> 
+        <!-- /.city-actions --> 
+       </div> 
+       <!-- /.city-content --> 
+      </div> 
+      <!-- /.city --> 
+     </div> 
+     <!-- /.col-xs-12 --> 
+    </div> 
+    <!-- /.row --> 
+    <div class="row" ll-section="city 2"> 
+     <div class="col-xs-12"> 
+      <div class="city" id="city-2"> 
+       <div class="city-image"> 
+        <a href="http://ude.bmwusa.com/notify-miami"> <img ll-component="image" ll-optimalwidth="1280" ll-optimalheight="734" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/Miami.jpg[2]" alt="" style="visibility: visible;"></a> 
+       </div> 
+       <!-- /.city-image --> 
+       <div class="city-content"> 
+        <h3 ll-component="simpleTitle" class="city-title">MUMBAI</h3> 
+        <!-- /.city-title --> 
+        <h6 ll-component="simpleTitle">Paras Auto, MAY 17-23<br> &nbsp;</h6> 
+        <span ll-component="adhocCont"><p><a href="https://www.google.co.in/maps/place/PARAS+AUTO/@19.0606477,72.736162,11z/data=!4m8!1m2!2m1!1sgoogle+map+car+showroom+mumbai!3m4!1s0x0:0x7e830d1003dd955e!8m2!3d19.0703518!4d72.9011965">View on map &gt;</a><br> &nbsp;</p> </span> 
+        <div ll-component="button" class="city-actions"> 
+         <a class="btn btn-transparent btn-white registerLink" style="color: rgb(255, 255, 255);" href="notify-mumbai.html">Notify Me</a> 
+        </div> 
+        <!-- /.city-actions --> 
+       </div> 
+       <!-- /.city-content --> 
+      </div> 
+      <!-- /.city --> 
+     </div> 
+     <!-- /.col-xs-12 --> 
+    </div> 
+    <!-- /.row --> 
+    <div class="row" ll-section="city 3"> 
+     <div class="col-xs-12"> 
+      <div class="city" id="city-3"> 
+       <div class="city-image"> 
+        <a href="http://ude.bmwusa.com/notify-sanfrancisco"> <img ll-component="image" ll-optimalwidth="1280" ll-optimalheight="734" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/San Francisco.jpg[2]" alt="" style="visibility: visible;"></a> 
+       </div> 
+       <!-- /.city-image --> 
+       <div class="city-content"> 
+        <h3 ll-component="simpleTitle" class="city-title">BANGALORE</h3> 
+        <!-- /.city-title --> 
+        <h6 ll-component="simpleTitle">Whitefield, JULY 27 - AUGUST 2<br> &nbsp;</h6> 
+        <span ll-component="adhocCont"><p><a href="https://www.google.co.in/maps/place/Elv+Signature/@12.973672,77.7544156,16z/data=!4m13!1m7!3m6!1s0x3bae11f35d0dfc83:0x30cfa512d80115f9!2sWhitefield,+Bengaluru,+Karnataka!3b1!8m2!3d12.9697999!4d77.7499467!3m4!1s0x3bae0de280d6a4cf:0x636ffcdb76481e04!8m2!3d12.9750009!4d77.759656">View on map &gt;</a><br> &nbsp;</p> </span> 
+        <div ll-component="button" class="city-actions"> 
+         <a class="btn btn-transparent btn-white registerLink" style="color: rgb(255, 255, 255);" href="notify-bangalore.html">Notify Me</a> 
+        </div> 
+        <!-- /.city-actions --> 
+       </div> 
+       <!-- /.city-content --> 
+      </div> 
+      <!-- /.city --> 
+     </div> 
+     <!-- /.col-xs-12 --> 
+    </div> 
+    <!-- /.row --> 
+    <div class="row" ll-section="city 4"> 
+     <div class="col-xs-12"> 
+      <div class="city" id="city-4"> 
+       <div class="city-image"> 
+        <a id="currentregistration2image" href="http://ude.bmwusa.com/notify-losangeles"> <img ll-component="image" ll-optimalwidth="1280" ll-optimalheight="734" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/LA.jpg[2]" alt="" style="visibility: visible;"></a> 
+       </div> 
+       <!-- /.city-image --> 
+       <div class="city-content"> 
+        <h3 ll-component="simpleTitle" class="city-title">CHENNAI<br> &nbsp;</h3> 
+        <!-- /.city-title --> 
+        <h6 ll-component="simpleTitle">RANGAS PARK, SEPTEMBER 14-20<br> &nbsp;</h6> 
+        <span ll-component="adhocCont"><p><a href="https://www.google.co.in/maps/place/Rangas+Park/@13.1258416,80.1509735,17z/data=!4m8!1m2!2m1!1schennai+orakkadam+car+!3m4!1s0x3a5263084331c2cf:0x3d34a8ce36393184!8m2!3d13.1254875!4d80.1556257">View on map &gt;</a><br> &nbsp;</p> </span> 
+        <div ll-component="button" class="city-actions"> 
+         <a class="btn btn-transparent btn-white registerLink" style="color: rgb(255, 255, 255);" href="notify-chennai.html">Notify Me</a> 
+        </div> 
+        <!-- /.city-actions --> 
+       </div> 
+       <!-- /.city-content --> 
+      </div> 
+      <!-- /.city --> 
+     </div> 
+     <!-- /.col-xs-12 --> 
+    </div> 
+    <!-- /.row --> 
+    <div class="row" ll-section="city 5"> 
+     <div class="col-xs-12"> 
+      <div class="city" id="city-5"> 
+       <div class="city-image"> 
+        <a href="http://ude.bmwusa.com/notify-newyorkcity"> <img id="currentregistrationimage" ll-component="image" ll-optimalwidth="1280" ll-optimalheight="734" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/NYC.jpg[2]" alt="" style="visibility: visible;"></a> 
+       </div> 
+       <!-- /.city-image --> 
+       <div class="city-content"> 
+        <h3 ll-component="simpleTitle" class="city-title">KERALA</h3> 
+        <!-- /.city-title --> 
+        <h6 ll-component="simpleTitle">Thattekad, NOVEMBER 7-14<br> &nbsp;</h6> 
+        <span ll-component="adhocCont"><p><a href="https://www.google.co.in/maps/place/HORNBILL+CAMP+-+Thattekad+-+70+kms+from+Munnar/@10.105504,76.6977507,16z/data=!4m13!1m7!3m6!1s0x3b080d514abec6bf:0xbd582caa5844192!2sKochi,+Kerala!3b1!8m2!3d9.9312328!4d76.2673041!3m4!1s0x3b07eeedc9dc7ded:0x8cfbb05040bf4fb1!8m2!3d10.1084166!4d76.7062962">View on map &gt;</a><br> &nbsp;</p> </span> 
+        <div ll-component="button" class="city-actions"> 
+         <a class="btn btn-transparent btn-white registerLink" style="color: rgb(255, 255, 255);" href="notify-kerala.html">Notify Me</a> 
+        </div> 
+        <!-- /.city-actions --> 
+       </div> 
+       <!-- /.city-content --> 
+      </div> 
+      <!-- /.city --> 
+     </div> 
+     <!-- /.col-xs-12 --> 
+    </div> 
+    <!-- /.row --> 
+    <div class="row deleted" ll-section="city 6" style="display: none;"> 
+     <div class="col-xs-12"> 
+      <div class="city" id="city-6"> 
+       <div class="city-image"> 
+        <a href="http://udenewyork.eventsbmw.com" id="currentregistrationnyimage"> <img ll-component="image" ll-optimalwidth="1280" ll-optimalheight="734" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/NewYork.jpg" alt="" style="visibility: visible; display: none;" class="deleted"></a> 
+       </div> 
+       <!-- /.city-image --> 
+       <div class="city-content"> 
+        <h3 ll-component="simpleTitle" class="city-title deleted" style="display: none;">New York<br> &nbsp;</h3> 
+        <!-- /.city-title --> 
+        <h6 ll-component="simpleTitle" class="deleted" style="display: none;">Citi Field, November 2 – 12<br> &nbsp;</h6> 
+        <span ll-component="adhocCont" class="deleted" style="display: none;"><p><a href="https://www.google.ca/maps/place/Citi+Field/@40.7570877,-73.84801,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25fe0b147d195:0xf55b95d4f099763b!8m2!3d40.7570877!4d-73.8458213">View on map &gt;</a><br> &nbsp;</p> </span> 
+        <div ll-component="button" class="city-actions deleted" style="display: none;"> 
+         <a class="btn btn-transparent btn-white" style="color: rgb(255, 255, 255);" href="http://demoe14.eventsbmw.com/">Register</a> 
+        </div> 
+        <!-- /.city-actions --> 
+       </div> 
+       <!-- /.city-content --> 
+      </div> 
+      <!-- /.city --> 
+     </div> 
+     <!-- /.col-xs-12 --> 
+    </div> 
+    <!-- /.row --> 
+   </section> 
+   <!-- /.section-cities --> 
+  </div> 
+  <!-- /.main --> 
+  <section class="section-locations" style="
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+"> 
+   <div class="container-fluid" language="EN"> 
+    <div class="section-head"> 
+     <div class="container" language="EN"> 
+      <div class="row" ll-section="Call Out Header"> 
+       <div class="col-md-8 col-md-offset-2"> 
+        <img ll-component="image" ll-optimalwidth="280" ll-optimalheight="117" alt="" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/UDE-OT-black_x005b_2_x005d_.png" style="width: 274px; visibility: visible;"> 
+        <div ll-component="adhocCont" class="section-content"> 
+         <p><br> <strong style="
+    display: block;
+"><span style="font-size:26px;">COULDN'T&nbsp;FIND AN EVENT IN YOUR AREA?</span></strong><br> This year we are taking the Ultimate Driving Experience on Tour, to make sure everyone has a chance to experience BMW like never before.<br> &nbsp;</p> 
+        </div> 
+        <div ll-component="button"> 
+         <a class="section-actions btn btn-transparent registerLink" style="color: rgb(0, 0, 0);" href="site.html">View Website</a> 
+        </div> 
+       </div> 
+       <!-- /.col-md-8 col-md-offset-2 --> 
+      </div> 
+      <!-- /.row --> 
+     </div> 
+     <!-- /.container --> 
+    </div> 
+   </div> 
+  </section> 
+  <footer class="footer" ll-section="footer"> 
+   <div class="row"> 
+    <div class="col-md-8 col-md-offset-2 col-sm-12"> 
+     <div class="socials"> 
+      <ul> 
+       <li><a href="https://www.facebook.com/BMWINDIA/" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/FACEBOOK.png"></a></li> 
+       <li><a href="https://twitter.com/BMWINDIA?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/TWITTER_white.png"></a></li> 
+       <li><a href="https://www.youtube.com/user/BMWINDIA" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/YOUTUBE_white.png"></a></li> 
+       <li><a href="https://www.instagram.com/bmwindia/?hl=en" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/INSTAGRAM_white.png" style="width: 22px; height: 22px;"></a></li> 
+      </ul> 
+     </div> 
+      <nav class="nav-footer" ll-component="adhocCont">
+       &nbsp; 
+      <ul> 
+       <li><a href="activites.html" target="_blank">Activities</a></li> 
+       <li><a href="cities.html" target="_blank">Cities</a></li> 
+       <li><a href="faq.html" target="_blank">FAQ</a></li> 
+      </ul> Questions? Please call 
+      <a href="tel:1-800-558-4269"  style="display: initial;">1-800-558-4269</a> 
+     </nav> 
+     <div class="footer-outro" ll-component="adhocCont"> 
+      <a href="http://www.bmwusa.com/standard/content/privacypolicy/" target="_blank">Privacy Policy</a> 
+      <a href="https://www.bmwusa.com/" target="_blank">© 2019 BMW of North America</a> 
+     </div>
+     <!-- /.footer-outro --> 
+    </div> 
+    <!-- /.col-sm-4 col-sm-offset-4 --> 
+   </div> 
+   <!-- /.row --> 
+  </footer> 
+  <!-- /.footer --> 
+ </div> 
+ <input id="gaPropertyId" name="gaPropertyId" value="UA-53569123-44" type="hidden"> 
+ <input id="gaViewId" name="gaViewId" value="110527641" type="hidden"> 
+ <script>
+		$(document).ready(function() {
+			if(!window.parent.document.getElementById("advancedHtmlContent") && $("#gaPropertyId").val()) {
+				(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+				ga("create", $("#gaPropertyId").val(), "auto");
+				ga("send", "pageview");
+			}
+		});
+	</script> 
+ <script>function getCookie(name) {
+	var value = "; " + document.cookie;
+	var parts = value.split("; " + name + "=");
+	if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+$('document').ready(function() {
+	var token = getCookie('token');
+//     console.log(token);
+    if(token) {
+		$(".registerLink").each(function(i){
+				var links = $(this).attr("href");
+				console.log(links);
+				$(this).attr("href", links + "?token=" + token);
+			});
+	}
+});
+</script> 
+</div>
+<div class="limelight-site-tracker" style="display:none"> 
+ <input type="hidden" value="777" id="siteId"> 
+ <input type="hidden" value="//matomo.limelightplatform.com/" id="trackerUrl"> 
+ <input type="hidden" value="piwik.php" id="trackerHost"> 
+ <input type="hidden" value="cities" id="pageUrlName"> 
+</div>
+<div class="limelight-conditional-container" style="display:none"> 
+ <script type="text/javascript" id="formId">$LL_CONDITIONALS.fieldList = [{"id":269159,"fieldName":"firstName","fieldType":"TEXT","conditionals":null,"engagementFieldId":262983},{"id":269160,"fieldName":"lastName","fieldType":"TEXT","conditionals":null,"engagementFieldId":262984},{"id":269161,"fieldName":"email","fieldType":"TEXT","conditionals":null,"engagementFieldId":262985}]</script> 
+</div>
+<div class="limelight-carousel-container" style="display:none"> 
+ <script type="text/javascript" id="formId"></script> 
+</div>

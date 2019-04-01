@@ -1,0 +1,695 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<link rel="icon" type="image/png" href="https://www.bmwusa.com/etc/designs/bmwusa/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap.min.css">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/style.css">
+<link href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/calendar/fullcalendar.min.css" rel="stylesheet">
+<link href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/calendar/calendar.css" rel="stylesheet">
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/font-awesome/css/font-awesome.min.css">
+<script src="https://s3.amazonaws.com/themes.limelightplatform.com/global/jquery.min.js"></script>
+<script src="https://s3.amazonaws.com/themes.limelightplatform.com/global/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/cities_activities/style.css">
+<script src="https://s3.amazonaws.com/themes.limelightplatform.com/client/bmw-na/js/limelight-bmw-ude.js"></script>
+<style>
+    .navbar-toggle {
+        border: none;
+    }
+
+    .navbar-toggle .icon-bar {
+        background-color: #414141;
+    }
+	a {
+		color:#2FA3F3;
+		cursor:pointer;
+	}
+	#filter-group-pds {
+		padding: 0;
+	}
+	#filter-group-pds .col-sm-3 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#filter-group-pds .dropdown .dropdown-menu {
+		left: 0;
+	}
+	.fc-event {
+		background-color: #f2f2f2;
+	}
+	.fc-more-cell {
+		display: none;
+	}
+	.fc-event {
+		font-size: 12px;
+	}
+	@media (max-width: 500px) {
+		.fc-day-number {
+			font-size: 19px;
+		}
+		.fc-event {
+			font-size: 10px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.fc-event {
+			font-size: 6px;
+		}
+	}
+	.bg_black {
+		background-color: #333333;
+		color: #ffffff;
+		padding: 10px 20px 30px 20px;
+		margin-bottom: 40px;
+		font-size: 14px;
+		overflow: auto;
+		text-align: left;
+	}
+	.bg_black h3 {
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	/* .bg_black p {
+		font-size: 14px;
+	} */
+	.emptySessionSelectedDisplay {
+		text-align: center;
+	}
+	.nav-footer a:before {
+		content: '';
+		margin: 0;
+	}
+	@media (max-width: 500px) {
+		.form-footer {
+			padding: 0;
+		}
+	}
+    @media (min-width: 993px) {
+	.header .navbar-nav {
+		margin-top: 0;
+	}
+	.header .navbar-nav li:last-child {
+		border: 2px solid #1c69d3;
+		padding: 18px 33px;
+		margin-left: 30px;
+		margin-right: 20px;
+	}
+	.header .navbar-nav li:last-child a {
+		color: #000000;
+	}
+}
+    @media (max-width: 700px) {
+        .nav-footer li {
+            padding: 0 15px;
+        }
+    }
+</style>
+<script>
+!function(f,b,e,v,n,t,s)
+
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '760226404025127'); 
+fbq('track', 'PageView');
+
+$(document).on( "completeRegistrationEvent", function() {
+	fbq('track','CompleteRegistration',{
+		content_name: 'UDE_Submission'
+	});
+});
+
+</script>
+<script type="text/javascript" class="limelight-web-analytics" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-web-tracker.js"></script>
+<style id="__web-inspector-hide-shortcut-style__" type="text/css">
+.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+{
+    visibility: hidden !important;
+}
+</style>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/pickadate/picker.min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/pickadate/classic.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/pickadate/classic.date.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/datatables/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/datatables/dataTables.bootstrap.min.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/moment.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/datatables/datetime-moment.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/bootstrap-multiselect/bootstrap-multiselect.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/bootstrap-multiselect/bootstrap-multiselect.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://js.squareup.com/v2/paymentform"></script>
+<script type="text/javascript" class="limelight-resources" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/limelight-payment.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/limelight-pickadate.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://s3.amazonaws.com/themes.limelightplatform.com/global/css/dashboard/grid-view.css">
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/form-alignment.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-utils.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-form.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-conditionals.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-payments.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/pickadate/picker.date.min.js"></script>
+<script type="text/javascript" class="limelight-resources" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/dashboard/limelight-filter-condition.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/slick.min.css">
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/slick-theme.min.css">
+<script type="text/javascript" class="limelight-resources" src="https://dashboard.limelightplatform.com/limelight/js/slick-carousel/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" class="limelight-resources" href="https://dashboard.limelightplatform.com/limelight/css/slick-carousel/limelight-slick.css"><div class="wrapper container-fluid" language="EN"> 
+ <div class="row"> 
+  <header class="header"> 
+   <nav class="navbar"> 
+    <div class="shell"> 
+     <div class="navbar-header" ll-section="navigation"> 
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      <a class="navbar-brand" href="http://udeot.bmwusa.com"> <span class="slogan" style="background:none;"><img ll-component="image" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/UDE-OT-black_x005b_2_x005d_.png" style="visibility: visible;" class=""></span> </a> 
+     </div> 
+     <div id="navbar" class="collapse navbar-collapse navbar-right"> 
+      <ul class="nav navbar-nav"> 
+       <li><a href="site.html">Home</a></li> 
+       <li><a href="site.html#activities">Activities</a></li> 
+       <li><a href="faq.html">FAQ</a></li> 
+       <li><a href="site.html#register">Find Your City</a></li> 
+      </ul> 
+     </div> 
+     <!--/.nav-collapse --> 
+    </div> 
+   </nav> 
+  </header> 
+  <!-- /.header --> 
+  <div ll-section="Banner" class="intro-image"> 
+   <img ll-component="image" ll-optimalwidth="1280" ll-optimalheight="460" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/Washington DC.jpg" alt="" style="visibility: visible;"> 
+  </div> 
+  <!-- /.intro --> 
+  <section class="section-registration"> 
+   <div class="container-fluid" language="EN"> 
+    <div class="row" ll-section="registration form"> 
+     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 hide-on-submit"> 
+      <div class="section-head"> 
+       <h1 ll-component="simpleTitle" class="section-title"><span style="">Registration</span></h1> 
+       <h3 ll-component="simpleTitle" class="subhead"><span style="">DELHI</span></h3> 
+       <h5 ll-component="simpleTitle" class="subhead"><span style="font-size:18px;">April 4 - 7,&nbsp;2019</span></h5> 
+       <div ll-component="adhocCont"> 
+        <p><span style="font-family:arial,helvetica,sans-serif;">Welcome to the BMW Ultimate Driving Experience on Tour registration. Please fill out the information below to register for an event. Don’t forget to check out the Street Drives, you will be able to sign up for this activity once you arrive on-site.</span><br> &nbsp;</p> 
+       </div> 
+       <a href="https://www.google.com/maps/place/FedExField/@38.9076433,-76.8645454,15z/data=!4m2!3m1!1s0x0:0x4770659d01cbb79e?ved=2ahUKEwi9n5q68s3gAhUlw4MKHQcFBfsQ_BIwEnoECAIQCA"><img ll-component="image" ll-optimalwidth="196" ll-optimalheight="176" alt="" src="http://cms1.limelightplatform.com/binaries/original/content/gallery/publishing/gridimage/brands/229/DC - FedExField.jpeg" style="width: 196px; height: 176px; visibility: visible;"></a> 
+       <div ll-component="adhocCont"> 
+        <br> 
+        <font face="arial, helvetica, sans-serif"><span style="font-size: 12px;"><b>CARS SHOWROOM</b></span></font> 
+        <br> 
+        <span style="font-size:10px;"><span style="font-family:arial,helvetica,sans-serif;">1600 Fedex Way, Landover, MD 20785&nbsp;<br> Parking: Lot F10</span></span> 
+        <br> 
+        <br> 
+        <span style="font-family:arial,helvetica,sans-serif;">Questions? Please call <a href="tel:1-800-558-4269">1-800-558-4269</a></span> 
+       </div> 
+      </div> 
+      <!-- /.section-head --> 
+      <div class="section-body"> 
+       <div ll-component="adhocCont"> 
+        <br> 
+        <span style="font-size:18px;"><span style="font-family:arial,helvetica,sans-serif;">Select an activity:</span></span> 
+        <br> 
+        <span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">** Autocross sessions begin promptly at their designated start time. Please arrive at least 15 - 20 minutes prior to your session’s start time. If you arrive late, you run the risk of forfeiting your reservation. Additionally all participants must attend the 10 minute mandatory safety briefing at the beginning of the autocross session. **<br> <br> For Autocross, sessions are limited to 1 per person. <strong>If the Activity is marked as (Waitlist), you can sign up to be on our waitlist. If any spots become available, we will notify you immediately.</strong> All attendees must fully register for a session by completing the form below. Please refer to the FAQ page or call <a href="tel:1-800-558-4269">1-800-558-4269</a> if you have any questions.</span></span> 
+        <br> &nbsp; 
+       </div> 
+       <div id="filter-group-pds"> 
+        <div class="dropdown col-sm-3"> 
+         <a class="btn btn-filter dropdown-toggle" id="classFilterBtn" name="classFilterBtn" data-toggle="dropdown" href="#">Select Program <span class="caret"></span> </a> 
+         <ul class="dropdown-menu" id="classFilter"> 
+          <li value="Autocross"><a href="#" data-value="Autocross"><input type="checkbox">Autocross</a></li> 
+         </ul> 
+        </div> 
+        <div class="clear-dropdown col-sm-2"> 
+         <a class="btn" id="clearFilters" href="#">Clear Filters</a> 
+        </div> 
+        <br style="clear:both;"> 
+       </div> 
+       <div class="form-contact"> 
+        <form id="llForm" ll-component="form" action="https://dashboard.limelightplatform.com/limelight/integration/SubmitForm.json?formId=30617" form-id="30617" event-id="19724" payment-application-id="sq0idp-4j-ONvcUTo0gKDhXuoqMrw" class="" style="" data-matomo-name="registration" error-action="https://dashboard.limelightplatform.com/limelight/integration/submit/errors.json?formId=30617"> 
+         <div class="form-error-container"> 
+          <span class="error" for="form"></span> 
+         </div> 
+         <div class="form-container"> 
+          <div id="formFieldList" class=""> 
+           <ul class="row" style="list-style: none; padding: 0;"> 
+            <li field-name="sessionId" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="SESSION" session-view="CALENDAR" column-span="2" data-field-id="448021" data-server-url="https://dashboard.limelightplatform.com/limelight" style=""></li> 
+            <li field-name="dateOfBirth" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="TEXT" column-span="2" format="ARBITRARY" style=""><label class="field-label" for="dateOfBirth"><span style="font-size:20px;">Enter your date of birth:</span><br> <br> NOTE: Drivers must be at least 18 years of age at the time of the event. Please don’t forget to bring your valid driver’s license with you.<span class="required">*</span></label>
+             <div class="input-container">
+              <input name="dateOfBirth" id="dateOfBirth" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="dateOfBirth"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="headerCompleteRegistration" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="SECTION_HEADER" column-span="2" style="">
+             <div class="field-label"> 
+              <strong><span style="font-size:20px;">Complete Your Registration</span></strong> 
+              <br> 
+              <br> Please provide your information below to complete registration. 
+             </div><p class="field-note"></p>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;"></li> 
+            <li field-name="firstName" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="ARBITRARY" style="height: 128px;"><label class="field-label" for="firstName">First Name<span class="required">*</span></label>
+             <div class="input-container">
+              <input name="firstName" id="firstName" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="firstName"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="middleInitial" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="ARBITRARY" style="height: 128px;"><label class="field-label" for="middleInitial">Middle Initial</label>
+             <div class="input-container">
+              <input name="middleInitial" id="middleInitial" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="middleInitial"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="lastName" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="ARBITRARY" style="height: 128px;"><label class="field-label" for="lastName">Last Name<span class="required">*</span></label>
+             <div class="input-container">
+              <input name="lastName" id="lastName" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="lastName"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="address" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="ARBITRARY" style="height: 128px;"><label class="field-label" for="address">Address<span class="required">*</span></label>
+             <div class="input-container">
+              <input name="address" id="address" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="address"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="address2" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="ARBITRARY" style="height: 128px;"><label class="field-label" for="address2">Address 2</label>
+             <div class="input-container">
+              <input name="address2" id="address2" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="address2"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="city" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="ARBITRARY" style="height: 128px;"><label class="field-label" for="city">City<span class="required">*</span></label>
+             <div class="input-container">
+              <input name="city" id="city" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="city"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="state" class="ll-form-field col-md-6 align-item" form-field-type="DROPDOWN" column-span="1" style="height: 129px;"><label class="field-label" for="state">State<span class="required">*</span></label>
+             <div class="input-container ll-dropdown">
+              <select id="state" name="state" class="form-control" placeholder="
+               Select 
+             " data-fc-source-name=""><option value="PLACEHOLDER_VALUE" data-filter-criteria=""> Select </option><option value="AL" data-filter-criteria="">Alabama</option><option value="AK" data-filter-criteria="">Alaska</option><option value="AZ" data-filter-criteria="">Arizona</option><option value="AR" data-filter-criteria="">Arkansas</option><option value="CA" data-filter-criteria="">California</option><option value="CO" data-filter-criteria="">Colorado</option><option value="CT" data-filter-criteria="">Connecticut</option><option value="DE" data-filter-criteria="">Delaware</option><option value="FL" data-filter-criteria="">Florida</option><option value="GA" data-filter-criteria="">Georgia</option><option value="HI" data-filter-criteria="">Hawaii</option><option value="ID" data-filter-criteria="">Idaho</option><option value="IL" data-filter-criteria="">Illinois</option><option value="IN" data-filter-criteria="">Indiana</option><option value="IA" data-filter-criteria="">Iowa</option><option value="KS" data-filter-criteria="">Kansas</option><option value="KY" data-filter-criteria="">Kentucky</option><option value="LA" data-filter-criteria="">Louisiana</option><option value="ME" data-filter-criteria="">Maine</option><option value="MD" data-filter-criteria="">Maryland</option><option value="MA" data-filter-criteria="">Massachusetts</option><option value="MI" data-filter-criteria="">Michigan</option><option value="MN" data-filter-criteria="">Minnesota</option><option value="MS" data-filter-criteria="">Mississippi</option><option value="MO" data-filter-criteria="">Missouri</option><option value="MT" data-filter-criteria="">Montana</option><option value="NE" data-filter-criteria="">Nebraska</option><option value="NV" data-filter-criteria="">Nevada</option><option value="NH" data-filter-criteria="">New Hampshire</option><option value="NJ" data-filter-criteria="">New Jersey</option><option value="NM" data-filter-criteria="">New Mexico</option><option value="NY" data-filter-criteria="">New York</option><option value="NC" data-filter-criteria="">North Carolina</option><option value="ND" data-filter-criteria="">North Dakota</option><option value="OH" data-filter-criteria="">Ohio</option><option value="OK" data-filter-criteria="">Oklahoma</option><option value="OR" data-filter-criteria="">Oregon</option><option value="PA" data-filter-criteria="">Pennsylvania</option><option value="PR" data-filter-criteria="">Puerto Rico</option><option value="RI" data-filter-criteria="">Rhode Island</option><option value="SC" data-filter-criteria="">South Carolina</option><option value="SD" data-filter-criteria="">South Dakota</option><option value="TN" data-filter-criteria="">Tennessee</option><option value="TX" data-filter-criteria="">Texas</option><option value="UT" data-filter-criteria="">Utah</option><option value="VT" data-filter-criteria="">Vermont</option><option value="VA" data-filter-criteria="">Virginia</option><option value="WA" data-filter-criteria="">Washington</option><option value="DC" data-filter-criteria="">Washington DC</option><option value="WV" data-filter-criteria="">West Virginia</option><option value="WI" data-filter-criteria="">Wisconsin</option><option value="WY" data-filter-criteria="">Wyoming</option></select>
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none">
+               Select 
+             </div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="state"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="zip_code" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="UNITED_STATES_ZIP_CODE" style="height: 129px;"><label class="field-label" for="zip_code">Zip Code<span class="required">*</span></label>
+             <div class="input-container">
+              <input name="zip_code" id="zip_code" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="zip_code"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="email" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="EMAIL_ADDRESS" style="height: 129px;"><label class="field-label" for="email">Email<span class="required">*</span></label>
+             <div class="input-container">
+              <input name="email" id="email" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="email"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="cellPhone" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="NORTH_AMERICAN_PHONE_NUMBER_WITH_AREA_CODE" style="height: 129px;"><label class="field-label" for="cellPhone">Cell Phone<span class="required">*</span></label>
+             <div class="input-container">
+              <input name="cellPhone" id="cellPhone" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="cellPhone"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="homePhone" class="ll-form-field col-md-6 align-item" form-field-type="TEXT" column-span="1" format="NORTH_AMERICAN_PHONE_NUMBER_WITH_AREA_CODE" style=""><label class="field-label" for="homePhone">Home Phone</label>
+             <div class="input-container">
+              <input name="homePhone" id="homePhone" type="text" value="" class="form-control" placeholder="">
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="homePhone"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="headerAdditonalInformation" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="SECTION_HEADER" column-span="2" style="">
+             <div class="field-label"> 
+              <strong><span style="font-size:20px;">Additional Information</span></strong> 
+              <br> 
+              <br> Some additional information to help us serve you. 
+             </div><p class="field-note"></p>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;"></li> 
+            <li field-name="model_of_interest" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="DROPDOWN" column-span="2" style=""><label class="field-label" for="model_of_interest">If you are interested in a BMW vehicle, please select the model below.<span class="required">*</span></label>
+             <div class="input-container ll-dropdown">
+              <select id="model_of_interest" name="model_of_interest" class="form-control" placeholder="
+               Select 
+             " data-fc-source-name=""><option value="PLACEHOLDER_VALUE" data-filter-criteria=""> Select </option><option value="All Models" data-filter-criteria="">All Models</option><option value="Undecided" data-filter-criteria="">Undecided</option><option value="No Interest" data-filter-criteria="">No Interest</option><option value="2 Series" data-filter-criteria="">2 Series</option><option value="3 Series" data-filter-criteria="">3 Series</option><option value="4 Series" data-filter-criteria="">4 Series</option><option value="5 Series" data-filter-criteria="">5 Series</option><option value="6 Series" data-filter-criteria="">6 Series</option><option value="7 Series" data-filter-criteria="">7 Series</option><option value="i3" data-filter-criteria="">i3</option><option value="i8" data-filter-criteria="">i8</option><option value="X1" data-filter-criteria="">X1</option><option value="X2" data-filter-criteria="">X2</option><option value="X3" data-filter-criteria="">X3</option><option value="X4" data-filter-criteria="">X4</option><option value="X5" data-filter-criteria="">X5</option><option value="X6" data-filter-criteria="">X6</option><option value="X7" data-filter-criteria="">X7</option><option value="M2" data-filter-criteria="">M2</option><option value="M3" data-filter-criteria="">M3</option><option value="M4" data-filter-criteria="">M4</option><option value="M5" data-filter-criteria="">M5</option><option value="M6" data-filter-criteria="">M6</option><option value="Z4" data-filter-criteria="">Z4</option><option value="iPerformance" data-filter-criteria="">iPerformance</option><option value="MPerformance" data-filter-criteria="">MPerformance</option></select>
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none">
+               Select 
+             </div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="model_of_interest"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="doYouHave_preferred_dealer" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="RADIO_BUTTON" column-span="2" style=""><label class="field-label" for="doYouHave_preferred_dealer">Do you have a preferred BMW Center?<span class="required">*</span></label>
+             <div class="input-container ll-radio-button">
+              <ul class="option-list">
+               <li class="radio-button-option radio"><input type="radio" id="doYouHave_preferred_dealer-0" name="doYouHave_preferred_dealer" value="Yes" class=""><label for="doYouHave_preferred_dealer-0" class="option-label">Yes</label></li>
+               <li class="radio-button-option radio"><input type="radio" id="doYouHave_preferred_dealer-1" name="doYouHave_preferred_dealer" value="No" class=""><label for="doYouHave_preferred_dealer-1" class="option-label">No</label></li>
+              </ul>
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="doYouHave_preferred_dealer"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="preferred_dealer_state" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="DROPDOWN" column-span="2" style=""><label class="field-label" for="preferred_dealer_state">Select State:</label>
+             <div class="input-container ll-dropdown">
+              <select id="preferred_dealer_state" name="preferred_dealer_state" class="form-control" placeholder="
+               Select 
+             " data-fc-source-name=""><option value="PLACEHOLDER_VALUE" data-filter-criteria=""> Select </option><option value="AL" data-filter-criteria="">Alabama</option><option value="AK" data-filter-criteria="">Alaska</option><option value="AZ" data-filter-criteria="">Arizona</option><option value="AR" data-filter-criteria="">Arkansas</option><option value="CA" data-filter-criteria="">California</option><option value="CO" data-filter-criteria="">Colorado</option><option value="CT" data-filter-criteria="">Connecticut</option><option value="DE" data-filter-criteria="">Delaware</option><option value="FL" data-filter-criteria="">Florida</option><option value="GA" data-filter-criteria="">Georgia</option><option value="HI" data-filter-criteria="">Hawaii</option><option value="ID" data-filter-criteria="">Idaho</option><option value="IL" data-filter-criteria="">Illinois</option><option value="IN" data-filter-criteria="">Indiana</option><option value="IA" data-filter-criteria="">Iowa</option><option value="KS" data-filter-criteria="">Kansas</option><option value="KY" data-filter-criteria="">Kentucky</option><option value="LA" data-filter-criteria="">Louisiana</option><option value="ME" data-filter-criteria="">Maine</option><option value="MD" data-filter-criteria="">Maryland</option><option value="MA" data-filter-criteria="">Massachusetts</option><option value="MI" data-filter-criteria="">Michigan</option><option value="MN" data-filter-criteria="">Minnesota</option><option value="MS" data-filter-criteria="">Mississippi</option><option value="MO" data-filter-criteria="">Missouri</option><option value="MT" data-filter-criteria="">Montana</option><option value="NE" data-filter-criteria="">Nebraska</option><option value="NV" data-filter-criteria="">Nevada</option><option value="NH" data-filter-criteria="">New Hampshire</option><option value="NJ" data-filter-criteria="">New Jersey</option><option value="NM" data-filter-criteria="">New Mexico</option><option value="NY" data-filter-criteria="">New York</option><option value="NC" data-filter-criteria="">North Carolina</option><option value="ND" data-filter-criteria="">North Dakota</option><option value="OH" data-filter-criteria="">Ohio</option><option value="OK" data-filter-criteria="">Oklahoma</option><option value="OR" data-filter-criteria="">Oregon</option><option value="PA" data-filter-criteria="">Pennsylvania</option><option value="PR" data-filter-criteria="">Puerto Rico</option><option value="RI" data-filter-criteria="">Rhode Island</option><option value="SC" data-filter-criteria="">South Carolina</option><option value="SD" data-filter-criteria="">South Dakota</option><option value="TN" data-filter-criteria="">Tennessee</option><option value="TX" data-filter-criteria="">Texas</option><option value="UT" data-filter-criteria="">Utah</option><option value="VT" data-filter-criteria="">Vermont</option><option value="VA" data-filter-criteria="">Virginia</option><option value="WA" data-filter-criteria="">Washington</option><option value="DC" data-filter-criteria="">Washington DC</option><option value="WV" data-filter-criteria="">West Virginia</option><option value="WI" data-filter-criteria="">Wisconsin</option><option value="WY" data-filter-criteria="">Wyoming</option></select>
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none">
+               Select 
+             </div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="preferred_dealer_state"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="preferred_dealer" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="DROPDOWN" column-span="2" style=""><label class="field-label" for="preferred_dealer">Who is your preferred BMW Center:</label>
+             <div class="input-container ll-dropdown">
+              <select id="preferred_dealer" name="preferred_dealer" class="form-control" placeholder="
+              Select
+             " data-fc-source-name="preferred_dealer_state"><option value="PLACEHOLDER_VALUE" data-filter-criteria="PA"> Select </option><option value="A &amp; L BMW" data-filter-criteria="PA">A &amp; L BMW</option><option value="Advantage BMW" data-filter-criteria="TX">Advantage BMW</option><option value="Advantage BMW of Clear Lake" data-filter-criteria="TX">Advantage BMW of Clear Lake</option><option value="Alderson European Motors" data-filter-criteria="TX">Alderson European Motors</option><option value="Apple BMW of York" data-filter-criteria="PA">Apple BMW of York</option><option value="Arrowhead BMW" data-filter-criteria="AZ">Arrowhead BMW</option><option value="Athens BMW" data-filter-criteria="GA">Athens BMW</option><option value="Autobahn Motorcars" data-filter-criteria="TX">Autobahn Motorcars</option><option value="Autogermana BMW" data-filter-criteria="PR">Autogermana BMW</option><option value="Autohaus BMW of Maplewood" data-filter-criteria="MO">Autohaus BMW of Maplewood</option><option value="Autoplex BMW" data-filter-criteria="TX">Autoplex BMW</option><option value="Bachrodt BMW" data-filter-criteria="IL">Bachrodt BMW</option><option value="Baron BMW" data-filter-criteria="KS">Baron BMW</option><option value="Basney BMW" data-filter-criteria="IN">Basney BMW</option><option value="Bert Ogden BMW" data-filter-criteria="TX">Bert Ogden BMW</option><option value="Bert Smith International" data-filter-criteria="FL">Bert Smith International</option><option value="Beverly Hills BMW" data-filter-criteria="CA">Beverly Hills BMW</option><option value="Bill Jacobs BMW" data-filter-criteria="IL">Bill Jacobs BMW</option><option value="Bill Pearce BMW" data-filter-criteria="NV">Bill Pearce BMW</option><option value="Bluegrass BMW" data-filter-criteria="KY">Bluegrass BMW</option><option value="BMW Cleveland" data-filter-criteria="OH">BMW Cleveland</option><option value="BMW Concord" data-filter-criteria="CA">BMW Concord</option><option value="BMW Encinitas" data-filter-criteria="CA">BMW Encinitas</option><option value="BMW Fresno" data-filter-criteria="CA">BMW Fresno</option><option value="BMW North Scottsdale" data-filter-criteria="AZ">BMW North Scottsdale</option><option value="BMW Northwest" data-filter-criteria="WA">BMW Northwest</option><option value="BMW of Akron" data-filter-criteria="OH">BMW of Akron</option><option value="BMW of Albany" data-filter-criteria="GA">BMW of Albany</option><option value="BMW of Alexandria" data-filter-criteria="VA">BMW of Alexandria</option><option value="BMW of Anchorage" data-filter-criteria="AK">BMW of Anchorage</option><option value="BMW of Ann Arbor" data-filter-criteria="MI">BMW of Ann Arbor</option><option value="BMW of Annapolis" data-filter-criteria="MD">BMW of Annapolis</option><option value="BMW of Arlington" data-filter-criteria="TX">BMW of Arlington</option><option value="BMW of Asheville" data-filter-criteria="NC">BMW of Asheville</option><option value="BMW of Atlantic City" data-filter-criteria="NJ">BMW of Atlantic City</option><option value="BMW of Austin" data-filter-criteria="TX">BMW of Austin</option><option value="BMW of Bakersfield" data-filter-criteria="CA">BMW of Bakersfield</option><option value="BMW of Barrington" data-filter-criteria="IL">BMW of Barrington</option><option value="BMW of Bayside" data-filter-criteria="NY">BMW of Bayside</option><option value="BMW of Beaumont" data-filter-criteria="TX">BMW of Beaumont</option><option value="BMW of Bel Air" data-filter-criteria="MD">BMW of Bel Air</option><option value="BMW of Bellevue" data-filter-criteria="WA">BMW of Bellevue</option><option value="BMW of Bend" data-filter-criteria="OR">BMW of Bend</option><option value="BMW of Birmingham" data-filter-criteria="AL">BMW of Birmingham</option><option value="BMW of Bloomfield" data-filter-criteria="NJ">BMW of Bloomfield</option><option value="BMW of Bloomington" data-filter-criteria="IL">BMW of Bloomington</option><option value="BMW of Bowling Green" data-filter-criteria="KY">BMW of Bowling Green</option><option value="BMW of Bridgeport" data-filter-criteria="CT">BMW of Bridgeport</option><option value="BMW of Bridgewater" data-filter-criteria="NJ">BMW of Bridgewater</option><option value="BMW of Brooklyn" data-filter-criteria="NY">BMW of Brooklyn</option><option value="BMW of Buena Park" data-filter-criteria="CA">BMW of Buena Park</option><option value="BMW of Cape Cod" data-filter-criteria="MA">BMW of Cape Cod</option><option value="BMW of Catonsville" data-filter-criteria="MD">BMW of Catonsville</option><option value="BMW of Champaign" data-filter-criteria="IL">BMW of Champaign</option><option value="BMW of Charlottesville" data-filter-criteria="VA">BMW of Charlottesville</option><option value="BMW of Chattanooga" data-filter-criteria="TN">BMW of Chattanooga</option><option value="BMW of Chico" data-filter-criteria="CA">BMW of Chico</option><option value="BMW of Cincinnati North" data-filter-criteria="OH">BMW of Cincinnati North</option><option value="BMW of College Station" data-filter-criteria="TX">BMW of College Station</option><option value="BMW of Columbia" data-filter-criteria="MO">BMW of Columbia (MO)</option><option value="BMW of Columbia (SC)" data-filter-criteria="SC">BMW of Columbia (SC)</option><option value="BMW of Columbus" data-filter-criteria="GA">BMW of Columbus</option><option value="BMW of Corpus Christi" data-filter-criteria="TX">BMW of Corpus Christi</option><option value="Anderson Motor Company of Crystal Lake" data-filter-criteria="IL">BMW of Crystal Lake</option><option value="BMW of Dallas" data-filter-criteria="TX">BMW of Dallas</option><option value="BMW of Dayton" data-filter-criteria="OH">BMW of Dayton</option><option value="BMW of Delray Beach" data-filter-criteria="FL">BMW of Delray Beach</option><option value="BMW of Denver Downtown" data-filter-criteria="CO">BMW of Denver Downtown</option><option value="BMW of Des Moines" data-filter-criteria="IA">BMW of Des Moines</option><option value="BMW of Devon" data-filter-criteria="PA">BMW of Devon</option><option value="BMW of El Cajon" data-filter-criteria="CA">BMW of El Cajon</option><option value="BMW of El Paso" data-filter-criteria="TX">BMW of El Paso</option><option value="BMW of Escondido" data-filter-criteria="CA">BMW of Escondido</option><option value="BMW of Eugene" data-filter-criteria="OR">BMW of Eugene</option><option value="BMW of Fairfax" data-filter-criteria="VA">BMW of Fairfax</option><option value="BMW of Florence" data-filter-criteria="SC">BMW of Florence</option><option value="Lauderdale BMW of Fort Lauderdale" data-filter-criteria="FL">BMW of Fort Lauderdale</option><option value="BMW of Fort Myers" data-filter-criteria="FL">BMW of Fort Myers</option><option value="BMW of Fort Walton Beach" data-filter-criteria="FL">BMW of Fort Walton Beach</option><option value="BMW of Fort Wayne" data-filter-criteria="IN">BMW of Fort Wayne</option><option value="BMW of Freehold" data-filter-criteria="NJ">BMW of Freehold</option><option value="BMW of Freeport" data-filter-criteria="NY">BMW of Freeport</option><option value="BMW of Fremont (AutoNation BMW of Fremont)" data-filter-criteria="CA">BMW of Fremont</option><option value="BMW of Gainesville" data-filter-criteria="FL">BMW of Gainesville</option><option value="BMW of Grapevine" data-filter-criteria="TX">BMW of Grapevine</option><option value="BMW of Greenwich" data-filter-criteria="CT">BMW of Greenwich</option><option value="BMW of Greenwich-Mamaroneck" data-filter-criteria="NY">BMW of Greenwich-Mamaroneck</option><option value="BMW of Gwinnett Place" data-filter-criteria="GA">BMW of Gwinnett Place</option><option value="BMW of Hawaii" data-filter-criteria="HI">BMW of Hawaii</option><option value="BMW of Henderson" data-filter-criteria="NV">BMW of Henderson</option><option value="BMW of Honolulu" data-filter-criteria="HI">BMW of Honolulu</option><option value="BMW of Houston North" data-filter-criteria="TX">BMW of Houston North</option><option value="BMW of Humboldt Bay" data-filter-criteria="CA">BMW of Humboldt Bay</option><option value="BMW of Idaho Falls" data-filter-criteria="ID">BMW of Idaho Falls</option><option value="BMW of Kansas City South" data-filter-criteria="MO">BMW of Kansas City South</option><option value="BMW of Lafayette" data-filter-criteria="IN">BMW of Lafayette</option><option value="BMW of Lancaster" data-filter-criteria="PA">BMW of Lancaster</option><option value="BMW of Las Vegas" data-filter-criteria="NV">BMW of Las Vegas</option><option value="BMW of Lincoln" data-filter-criteria="NE">BMW of Lincoln</option><option value="BMW of Little Rock" data-filter-criteria="AR">BMW of Little Rock</option><option value="BMW of Louisville" data-filter-criteria="KY">BMW of Louisville</option><option value="BMW of Lynchburg" data-filter-criteria="VA">BMW of Lynchburg</option><option value="BMW of Macon" data-filter-criteria="GA">BMW of Macon</option><option value="BMW of Manhattan" data-filter-criteria="NY">BMW of Manhattan</option><option value="BMW of Maui" data-filter-criteria="HI">BMW of Maui</option><option value="BMW of Meridian" data-filter-criteria="MS">BMW of Meridian</option><option value="BMW of Milwaukee North" data-filter-criteria="WI">BMW of Milwaukee North</option><option value="BMW of Minnetonka" data-filter-criteria="MN">BMW of Minnetonka</option><option value="BMW of Mobile" data-filter-criteria="AL">BMW of Mobile</option><option value="BMW of Monrovia" data-filter-criteria="CA">BMW of Monrovia</option><option value="BMW of Monterey" data-filter-criteria="CA">BMW of Monterey</option><option value="BMW of Montgomery" data-filter-criteria="AL">BMW of Montgomery</option><option value="BMW of Morristown" data-filter-criteria="NJ">BMW of Morristown</option><option value="BMW of Mountain View" data-filter-criteria="CA">BMW of Mountain View</option><option value="BMW of Mt. Kisco" data-filter-criteria="NY">BMW of Mt. Kisco</option><option value="BMW of Mt. Laurel" data-filter-criteria="NJ">BMW of Mt. Laurel</option><option value="BMW of Murray" data-filter-criteria="UT">BMW of Murray</option><option value="BMW of Murrieta" data-filter-criteria="CA">BMW of Murrieta</option><option value="BMW of Myrtle Beach" data-filter-criteria="SC">BMW of Myrtle Beach</option><option value="BMW of Nashville" data-filter-criteria="TN">BMW of Nashville</option><option value="BMW of New London" data-filter-criteria="CT">BMW of New London</option><option value="BMW of Newport" data-filter-criteria="RI">BMW of Newport</option><option value="BMW of Newton" data-filter-criteria="NJ">BMW of Newton</option><option value="BMW of North Haven" data-filter-criteria="CT">BMW of North Haven</option><option value="BMW of North Liberty" data-filter-criteria="IA">BMW of North Liberty</option><option value="BMW of Northwest Arkansas" data-filter-criteria="AR">BMW of Northwest Arkansas</option><option value="BMW of Norwood" data-filter-criteria="MA">BMW of Norwood</option><option value="BMW of Ocala" data-filter-criteria="FL">BMW of Ocala</option><option value="BMW of Okemos" data-filter-criteria="MI">BMW of Okemos</option><option value="BMW of Omaha" data-filter-criteria="NE">BMW of Omaha</option><option value="BMW of Ontario" data-filter-criteria="CA">BMW of Ontario</option><option value="BMW of Orland Park" data-filter-criteria="IL">BMW of Orland Park</option><option value="BMW of Oyster Bay" data-filter-criteria="NY">BMW of Oyster Bay</option><option value="BMW of Palm Springs" data-filter-criteria="CA">BMW of Palm Springs</option><option value="BMW of Peabody" data-filter-criteria="MA">BMW of Peabody</option><option value="BMW of Peoria" data-filter-criteria="IL">BMW of Peoria</option><option value="BMW of Pleasant Grove" data-filter-criteria="UT">BMW of Pleasant Grove</option><option value="BMW of Ramsey" data-filter-criteria="NJ">BMW of Ramsey</option><option value="BMW of Reading" data-filter-criteria="PA">BMW of Reading</option><option value="BMW of Ridgefield" data-filter-criteria="CT">BMW of Ridgefield</option><option value="BMW of Riverside" data-filter-criteria="CA">BMW of Riverside</option><option value="BMW of Roanoke" data-filter-criteria="VA">BMW of Roanoke</option><option value="BMW of Rochester" data-filter-criteria="NY">BMW of Rochester</option><option value="BMW of Rochester Hills" data-filter-criteria="MI">BMW of Rochester Hills</option><option value="BMW of Rockville" data-filter-criteria="MD">BMW of Rockville</option><option value="BMW of Roseville" data-filter-criteria="CA">BMW of Roseville</option><option value="BMW of Roxbury" data-filter-criteria="NJ">BMW of Roxbury</option><option value="BMW of Salem" data-filter-criteria="OR">BMW of Salem</option><option value="BMW of San Antonio" data-filter-criteria="TX">BMW of San Antonio</option><option value="BMW of San Diego" data-filter-criteria="CA">BMW of San Diego</option><option value="BMW of San Francisco" data-filter-criteria="CA">BMW of San Francisco</option><option value="BMW of San Luis Obispo" data-filter-criteria="CA">BMW of San Luis Obispo</option><option value="BMW of San Rafael" data-filter-criteria="CA">BMW of San Rafael</option><option value="BMW of Santa Maria" data-filter-criteria="CA">BMW of Santa Maria</option><option value="BMW of Sarasota" data-filter-criteria="FL">BMW of Sarasota</option><option value="BMW of Schererville" data-filter-criteria="IN">BMW of Schererville</option><option value="BMW of Shrewsbury" data-filter-criteria="MA">BMW of Shrewsbury</option><option value="BMW of Silver Spring" data-filter-criteria="MD">BMW of Silver Spring</option><option value="BMW of Sioux Falls" data-filter-criteria="SD">BMW of Sioux Falls</option><option value="BMW of South Albany" data-filter-criteria="NY">BMW of South Albany</option><option value="BMW of South Atlanta" data-filter-criteria="GA">BMW of South Atlanta</option><option value="BMW of South Austin" data-filter-criteria="TX">BMW of South Austin</option><option value="BMW of Southampton" data-filter-criteria="NY">BMW of Southampton</option><option value="BMW of Southpoint" data-filter-criteria="NC">BMW of Southpoint</option><option value="BMW of Spokane" data-filter-criteria="WA">BMW of Spokane</option><option value="BMW of Springfield" data-filter-criteria="MO">BMW of Springfield (MO)</option><option value="BMW of Springfield (NJ)" data-filter-criteria="NJ">BMW of Springfield (NJ)</option><option value="BMW of Sterling" data-filter-criteria="VA">BMW of Sterling</option><option value="BMW of Stratham" data-filter-criteria="NH">BMW of Stratham</option><option value="BMW of Sudbury" data-filter-criteria="MA">BMW of Sudbury</option><option value="BMW of Tenafly" data-filter-criteria="NJ">BMW of Tenafly</option><option value="BMW of the Hudson Valley" data-filter-criteria="NY">BMW of the Hudson Valley</option><option value="BMW of the Main Line" data-filter-criteria="PA">BMW of the Main Line</option><option value="BMW of the Permian Basin" data-filter-criteria="TX">BMW of the Permian Basin</option><option value="BMW of The Woodlands" data-filter-criteria="TX">BMW of The Woodlands</option><option value="BMW of Toledo" data-filter-criteria="OH">BMW of Toledo</option><option value="BMW of Topeka" data-filter-criteria="KS">BMW of Topeka</option><option value="BMW of Towson" data-filter-criteria="MD">BMW of Towson</option><option value="BMW of Traverse City" data-filter-criteria="MI">BMW of Traverse City</option><option value="BMW of Tri-Cities" data-filter-criteria="WA">BMW of Tri-Cities</option><option value="BMW of Tulsa" data-filter-criteria="OK">BMW of Tulsa</option><option value="BMW of Turnersville" data-filter-criteria="NJ">BMW of Turnersville</option><option value="BMW of Tuscaloosa" data-filter-criteria="AL">BMW of Tuscaloosa</option><option value="BMW of Tyler" data-filter-criteria="TX">BMW of Tyler</option><option value="Carbone BMW of Utica" data-filter-criteria="NY">BMW of Utica</option><option value="BMW of Visalia" data-filter-criteria="CA">BMW of Visalia</option><option value="BMW of Vista" data-filter-criteria="CA">BMW of Vista</option><option value="BMW of Warwick" data-filter-criteria="RI">BMW of Warwick</option><option value="BMW of Watertown" data-filter-criteria="CT">BMW of Watertown</option><option value="BMW of West Houston" data-filter-criteria="TX">BMW of West Houston</option><option value="BMW of West Springfield" data-filter-criteria="MA">BMW of West Springfield</option><option value="BMW of West St. Louis" data-filter-criteria="MO">BMW of West St. Louis</option><option value="BMW of Westbrook" data-filter-criteria="ME">BMW of Westbrook</option><option value="BMW of Westchester" data-filter-criteria="NY">BMW of Westchester</option><option value="BMW of Westlake" data-filter-criteria="OH">BMW of Westlake</option><option value="BMW of Wichita" data-filter-criteria="KS">BMW of Wichita</option><option value="BMW of Wichita Falls" data-filter-criteria="TX">BMW of Wichita Falls</option><option value="BMW of Williamsport" data-filter-criteria="PA">BMW of Williamsport</option><option value="BMW of Wilmington" data-filter-criteria="NC">BMW of Wilmington</option><option value="BMW Portland" data-filter-criteria="OR">BMW Portland</option><option value="BMW Santa Barbara" data-filter-criteria="CA">BMW Santa Barbara</option><option value="BMW Seattle" data-filter-criteria="WA">BMW Seattle</option><option value="BMW of Tucson" data-filter-criteria="AZ">BMW Tucson</option><option value="Bob Smith BMW" data-filter-criteria="CA">Bob Smith BMW</option><option value="Bobby Rahal BMW of South Hills" data-filter-criteria="PA">Bobby Rahal BMW of South Hills</option><option value="Braman BMW" data-filter-criteria="FL">Braman BMW</option><option value="Braman Motorcars" data-filter-criteria="FL">Braman Motorcars</option><option value="Braman Motorcars of Jupiter" data-filter-criteria="FL">Braman Motorcars of Jupiter</option><option value="Brian Harris BMW" data-filter-criteria="LA">Brian Harris BMW</option><option value="Burdick BMW" data-filter-criteria="NY">Burdick BMW</option><option value="Cain BMW" data-filter-criteria="OH">Cain BMW</option><option value="Capital BMW" data-filter-criteria="FL">Capital BMW</option><option value="Cardenas BMW" data-filter-criteria="TX">Cardenas BMW</option><option value="Casey BMW" data-filter-criteria="VA">Casey BMW</option><option value="Center BMW" data-filter-criteria="CA">Center BMW</option><option value="Century BMW" data-filter-criteria="AL">Century BMW (AL)</option><option value="Century BMW (SC)" data-filter-criteria="SC">Century BMW (SC)</option><option value="Century West BMW" data-filter-criteria="CA">Century West BMW</option><option value="Chapman BMW" data-filter-criteria="AZ">Chapman BMW</option><option value="Chapman BMW on Camelback" data-filter-criteria="AZ">Chapman BMW on Camelback</option><option value="Checkered Flag BMW" data-filter-criteria="VA">Checkered Flag BMW</option><option value="Circle BMW" data-filter-criteria="NJ">Circle BMW</option><option value="Classic BMW" data-filter-criteria="OH">Classic BMW (OH)</option><option value="Classic BMW (TX)" data-filter-criteria="TX">Classic BMW (TX)</option><option value="Co's BMW Center" data-filter-criteria="CO">Co's BMW Center</option><option value="Coggin BMW Treasure Coast" data-filter-criteria="FL">Coggin BMW Treasure Coast</option><option value="Competition BMW of Smithtown" data-filter-criteria="NY">Competition BMW of Smithtown</option><option value="Continental BMW of Darien" data-filter-criteria="CT">Continental BMW of Darien</option><option value="Crevier BMW" data-filter-criteria="CA">Crevier BMW</option><option value="Critz BMW" data-filter-criteria="GA">Critz BMW</option><option value="Crown BMW" data-filter-criteria="NC">Crown BMW</option><option value="D-Patrick Motoplex" data-filter-criteria="IN">D-Patrick Motoplex</option><option value="Daniels BMW" data-filter-criteria="PA">Daniels BMW</option><option value="Don Jacobs BMW" data-filter-criteria="KY">Don Jacobs BMW</option><option value="Dreyer &amp; Reinbold BMW North" data-filter-criteria="IN">Dreyer &amp; Reinbold BMW North</option><option value="Dreyer &amp; Reinbold BMW South" data-filter-criteria="IN">Dreyer &amp; Reinbold BMW South</option><option value="Dubuque BMW" data-filter-criteria="IA">Dubuque BMW</option><option value="East Bay BMW" data-filter-criteria="CA">East Bay BMW</option><option value="Elmhurst BMW" data-filter-criteria="IL">Elmhurst BMW</option><option value="Enterprise BMW" data-filter-criteria="WI">Enterprise BMW</option><option value="Erhard BMW of Bloomfield Hills" data-filter-criteria="MI">Erhard BMW of Bloomfield</option><option value="Erhard BMW of Farmington Hills" data-filter-criteria="MI">Erhard BMW of Farmington Hills</option><option value="Ferman BMW" data-filter-criteria="FL">Ferman BMW</option><option value="Fields BMW - Lakeland" data-filter-criteria="FL">Fields BMW - Lakeland</option><option value="Fields BMW" data-filter-criteria="FL">Fields BMW (FL)</option><option value="Fields BMW (IL)" data-filter-criteria="IL">Fields BMW (IL)</option><option value="Fields BMW of Daytona" data-filter-criteria="FL">Fields BMW of Daytona</option><option value="Fields BMW South Orlando" data-filter-criteria="FL">Fields BMW South Orlando</option><option value="Flemington BMW" data-filter-criteria="NJ">Flemington BMW</option><option value="Flow BMW" data-filter-criteria="NC">Flow BMW</option><option value="Flynn BMW" data-filter-criteria="MA">Flynn BMW</option><option value="Galleria BMW" data-filter-criteria="MS">Galleria BMW</option><option value="Garlyn Shelton Imports" data-filter-criteria="TX">Garlyn Shelton Imports</option><option value="Gault Auto Sport BMW" data-filter-criteria="NY">Gault Auto Sport BMW</option><option value="Gebhardt BMW" data-filter-criteria="CO">Gebhardt BMW</option><option value="Germain BMW of Naples" data-filter-criteria="FL">Germain BMW of Naples</option><option value="Global Imports" data-filter-criteria="GA">Global Imports</option><option value="Grand Blanc BMW" data-filter-criteria="MI">Grand Blanc BMW</option><option value="Grayson BMW" data-filter-criteria="TN">Grayson BMW</option><option value="Habberstad BMW" data-filter-criteria="NY">Habberstad BMW</option><option value="Habberstad BMW of Bay Shore" data-filter-criteria="NY">Habberstad BMW of Bay Shore</option><option value="Hansel BMW of Santa Rosa" data-filter-criteria="CA">Hansel BMW of Santa Rosa</option><option value="Hendrick BMW" data-filter-criteria="NC">Hendrick BMW</option><option value="Hendrick BMW Northlake" data-filter-criteria="NC">Hendrick BMW Northlake</option><option value="Herb Chambers BMW" data-filter-criteria="MA">Herb Chambers BMW</option><option value="Herrin-Gear BMW of Jackson" data-filter-criteria="MS">Herrin-Gear BMW of Jackson</option><option value="Hilton Head BMW" data-filter-criteria="SC">Hilton Head BMW</option><option value="I. G. Burton BMW" data-filter-criteria="DE">I. G. Burton BMW</option><option value="International Autos" data-filter-criteria="WI">International Autos</option><option value="Irvine BMW" data-filter-criteria="CA">Irvine BMW</option><option value="Isringhausen Imports" data-filter-criteria="IL">Isringhausen Imports</option><option value="Jackie Cooper Imports" data-filter-criteria="OK">Jackie Cooper Imports</option><option value="Joel Confer BMW" data-filter-criteria="PA">Joel Confer BMW</option><option value="Karl Knauz Motors" data-filter-criteria="IL">Karl Knauz Motors</option><option value="Keeler BMW" data-filter-criteria="NY">Keeler BMW</option><option value="Kelly BMW" data-filter-criteria="OH">Kelly BMW</option><option value="Kimberly BMW of Davenport" data-filter-criteria="IA">Kimberly BMW of Davenport</option><option value="Kuni BMW" data-filter-criteria="OR">Kuni BMW</option><option value="Lauderdale BMW of Pembroke Pines" data-filter-criteria="FL">Lauderdale BMW of Pembroke Pines</option><option value="Laurel BMW" data-filter-criteria="PA">Laurel BMW</option><option value="Laurel BMW of Westmont" data-filter-criteria="IL">Laurel BMW of Westmont</option><option value="Leith BMW" data-filter-criteria="NC">Leith BMW</option><option value="Long Beach BMW" data-filter-criteria="CA">Long Beach BMW</option><option value="MAG BMW of Dublin" data-filter-criteria="OH">MAG BMW of Dublin</option><option value="McKenna BMW" data-filter-criteria="CA">McKenna BMW</option><option value="Medford BMW" data-filter-criteria="OR">Medford BMW</option><option value="Melbourne BMW" data-filter-criteria="FL">Melbourne BMW</option><option value="Momentum BMW" data-filter-criteria="TX">Momentum BMW</option><option value="Moses BMW" data-filter-criteria="WV">Moses BMW</option><option value="Moss Motors, Inc." data-filter-criteria="LA">Moss Motors, Inc.</option><option value="Motorwerks BMW" data-filter-criteria="MN">Motorwerks BMW</option><option value="Nalley BMW of Decatur" data-filter-criteria="GA">Nalley BMW of Decatur</option><option value="New Century BMW" data-filter-criteria="CA">New Century BMW</option><option value="New Country BMW" data-filter-criteria="CT">New Country BMW</option><option value="New Motors, Inc." data-filter-criteria="PA">New Motors, Inc.</option><option value="Newbold BMW" data-filter-criteria="IL">Newbold BMW</option><option value="Nick Alexander Imports" data-filter-criteria="CA">Nick Alexander Imports</option><option value="Niello BMW Elk Grove" data-filter-criteria="CA">Niello BMW Elk Grove</option><option value="Niello BMW Sacramento" data-filter-criteria="CA">Niello BMW Sacramento</option><option value="Northwest BMW" data-filter-criteria="MD">Northwest BMW</option><option value="Open Road BMW" data-filter-criteria="NJ">Open Road BMW</option><option value="Orange County BMW" data-filter-criteria="NY">Orange County BMW</option><option value="Orr BMW" data-filter-criteria="LA">Orr BMW</option><option value="Otto's BMW" data-filter-criteria="PA">Otto's BMW</option><option value="P &amp; W BMW" data-filter-criteria="PA">P &amp; W BMW</option><option value="Pacific BMW" data-filter-criteria="CA">Pacific BMW</option><option value="Park Avenue BMW" data-filter-criteria="NJ">Park Avenue BMW</option><option value="Park Place BMW" data-filter-criteria="MN">Park Place BMW</option><option value="Passport BMW" data-filter-criteria="MD">Passport BMW</option><option value="Patrick BMW" data-filter-criteria="IL">Patrick BMW</option><option value="Paul Miller BMW" data-filter-criteria="NJ">Paul Miller BMW</option><option value="Peake BMW" data-filter-criteria="LA">Peake BMW</option><option value="Perillo BMW, Inc." data-filter-criteria="IL">Perillo BMW, Inc.</option><option value="Peter Pan BMW" data-filter-criteria="CA">Peter Pan BMW</option><option value="Peterson BMW of Boise" data-filter-criteria="ID">Peterson BMW of Boise</option><option value="Plaza Motor Company" data-filter-criteria="MO">Plaza Motor Company</option><option value="Preston BMW" data-filter-criteria="OH">Preston BMW</option><option value="Princeton BMW" data-filter-criteria="NJ">Princeton BMW</option><option value="Rallye BMW" data-filter-criteria="NY">Rallye BMW</option><option value="Reeves Import Motorcars, Inc." data-filter-criteria="FL">Reeves Import Motorcars, Inc.</option><option value="Richmond BMW (Midlothian)" data-filter-criteria="VA">Richmond BMW (Midlothian)</option><option value="Richmond BMW" data-filter-criteria="VA">Richmond BMW (Richmond)</option><option value="Rick Hendrick BMW Charleston" data-filter-criteria="SC">Rick Hendrick BMW Charleston</option><option value="Rick Hill BMW" data-filter-criteria="TN">Rick Hill BMW</option><option value="Roadshow BMW" data-filter-criteria="TN">Roadshow BMW</option><option value="Rusnak BMW" data-filter-criteria="CA">Rusnak BMW</option><option value="Sale BMW" data-filter-criteria="NC">Sale BMW</option><option value="Sandia BMW" data-filter-criteria="NM">Sandia BMW</option><option value="Sandy Sansing BMW" data-filter-criteria="FL">Sandy Sansing BMW</option><option value="Santa Fe BMW" data-filter-criteria="NM">Santa Fe BMW</option><option value="Santa Monica BMW" data-filter-criteria="CA">Santa Monica BMW</option><option value="Schomp BMW of Highlands Ranch" data-filter-criteria="CO">Schomp BMW of Highlands Ranch</option><option value="Sewickley BMW" data-filter-criteria="PA">Sewickley BMW</option><option value="Sharpe BMW" data-filter-criteria="MI">Sharpe BMW</option><option value="South Bay BMW" data-filter-criteria="CA">South Bay BMW</option><option value="South Motors BMW" data-filter-criteria="FL">South Motors BMW</option><option value="South Shore BMW" data-filter-criteria="MA">South Shore BMW</option><option value="Sterling BMW" data-filter-criteria="CA">Sterling BMW</option><option value="Steve Thomas BMW" data-filter-criteria="CA">Steve Thomas BMW</option><option value="Stevens Creek BMW" data-filter-criteria="CA">Stevens Creek BMW</option><option value="Sun Motor Cars BMW" data-filter-criteria="PA">Sun Motor Cars BMW</option><option value="Taylor BMW" data-filter-criteria="GA">Taylor BMW</option><option value="The Automaster" data-filter-criteria="VT">The Automaster</option><option value="The BMW Store" data-filter-criteria="OH">The BMW Store</option><option value="Thompson BMW" data-filter-criteria="PA">Thompson BMW</option><option value="Tom Bush BMW Jacksonville" data-filter-criteria="FL">Tom Bush BMW Jacksonville</option><option value="Tom Bush BMW Orange Park" data-filter-criteria="FL">Tom Bush BMW Orange Park</option><option value="Tom Hesser BMW" data-filter-criteria="PA">Tom Hesser BMW</option><option value="Towne BMW" data-filter-criteria="NY">Towne BMW</option><option value="Tulley BMW" data-filter-criteria="NH">Tulley BMW</option><option value="Union Park BMW" data-filter-criteria="DE">Union Park BMW</option><option value="United BMW of Roswell" data-filter-criteria="GA">United BMW</option><option value="Valencia BMW" data-filter-criteria="CA">Valencia BMW</option><option value="Valley Auto World, Inc." data-filter-criteria="NC">Valley Auto World, Inc.</option><option value="Valley BMW" data-filter-criteria="CA">Valley BMW</option><option value="Vista Motor Company" data-filter-criteria="FL">Vista BMW Coconut Creek</option><option value="Vista BMW Pompano Beach" data-filter-criteria="FL">Vista BMW Pompano Beach</option><option value="Voss Village BMW" data-filter-criteria="OH">Voss Village BMW</option><option value="Walker BMW" data-filter-criteria="LA">Walker BMW</option><option value="Weatherford BMW" data-filter-criteria="CA">Weatherford BMW</option><option value="West German BMW" data-filter-criteria="PA">West German BMW</option><option value="Wide World BMW" data-filter-criteria="NY">Wide World BMW</option><option value="Winslow BMW of Colorado Springs" data-filter-criteria="CO">Winslow BMW of Colorado Springs</option><option value="Wyoming Valley BMW" data-filter-criteria="PA">Wyoming Valley BMW</option><option value="Zeigler BMW" data-filter-criteria="MI">Zeigler BMW</option><option value="Zimbrick BMW" data-filter-criteria="WI">Zimbrick BMW</option></select>
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none">
+               Select 
+             </div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="preferred_dealer"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="headerOptIn" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="SECTION_HEADER" column-span="2" style="">
+             <div class="field-label">
+               Naturally, we respect your privacy (for our complete privacy policy go to 
+              <a href="http://www.bmwusa.com/privacy-policy">www.bmwusa.com/privacy-policy</a>). Registration for this event will be used by BMW of North America, LLC for event communications. 
+             </div><p class="field-note"></p>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;"></li> 
+            <li field-name="opt_in_NA" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="SINGLE_CHECKBOX" column-span="2" style=""><label class="field-label">&nbsp;</label>
+             <div class="input-container ll-single-checkbox">
+              <ul class="option-list">
+               <li class="checkbox-option checkbox"><input type="checkbox" id="opt_in_NA" name="opt_in_NA" value="true" class=""><input type="hidden" id="opt_in_NAHidden" name="opt_in_NA" value="false" class=""><label for="opt_in_NA" class="option-label" style="display:inline">Please check here if you wish to receive additional communications from BMW of North America, LLC with exclusive news, offers and other benefits.</label></li>
+              </ul>
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="opt_in_NA"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="opt_in_dealer" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="SINGLE_CHECKBOX" column-span="2" style=""><label class="field-label">&nbsp;</label>
+             <div class="input-container ll-single-checkbox">
+              <ul class="option-list">
+               <li class="checkbox-option checkbox"><input type="checkbox" id="opt_in_dealer" name="opt_in_dealer" value="true" class=""><input type="hidden" id="opt_in_dealerHidden" name="opt_in_dealer" value="false" class=""><label for="opt_in_dealer" class="option-label" style="display:inline">Please check here if you wish to receive additional information from your local BMW Center regarding events, specials and services as well as vehicle features, options and availability.</label></li>
+              </ul>
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="opt_in_dealer"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="opt_in_text" class="ll-form-field column-span-two col-md-12 align-item" form-field-type="SINGLE_CHECKBOX" column-span="2" style=""><label class="field-label">&nbsp;</label>
+             <div class="input-container ll-single-checkbox">
+              <ul class="option-list">
+               <li class="checkbox-option checkbox"><input type="checkbox" id="opt_in_text" name="opt_in_text" value="true" class=""><input type="hidden" id="opt_in_textHidden" name="opt_in_text" value="false" class=""><label for="opt_in_text" class="option-label" style="display:inline">Please check here to allow text messages for event/test drive notifications. &nbsp;(For our complete text message policy please go to www.bmwusa.com/privacy-policy). By checking the checkbox and clicking ”Submit”, you confirm that you are the current owner/subscriber of the mobile phone number provided or that the current owner/subscriber of this mobile phone number authorized you to provide this number (collectively, “current owner”) to BMW of North America, LLC, and that the current owner consents to be contacted by BMW of North America, LLC, BMW dealerships, and our affiliates &nbsp;at the mobile number provided with messages that may market or advertise products, goods, or services. &nbsp;You do not need to consent to receive these messages as a condition of purchasing any goods or services. &nbsp;Wireless and text message fees may apply from your carrier. &nbsp;You can reply STOP to a text message to stop receiving mobile alerts from that event.</label></li>
+              </ul>
+             </div>
+             <div class="field-note"></div>
+             <div class="placeholder" style="display:none"></div><br style="clear:left;">
+             <div class="error-container">
+              <span class="error" for="opt_in_text"></span>
+             </div><br style="clear:both;"></li> 
+            <li field-name="sq-payment-header" class="ll-form-field payment-field column-span-two col-md-12" form-field-type="SECTION_HEADER" column-span="2"><p class="field-label"><strong><span style="font-size:18px;"><span style="font-family:arial,helvetica,sans-serif;">Registration Payment</span></span></strong><br> <em><span style="font-size: 14px;">** M Car Control Clinic fee is non-refundable **</span></em></p><p class="field-note"></p><br style="clear:left;"></li> 
+            <li field-name="sq-payment-amount" class="ll-form-field payment-field column-span-two col-md-12" form-field-type="LABEL" column-span="2"><p class="field-label">Amount Due: $<span id="paymentAmount">100</span></p></li> 
+            <li field-name="sq-card-number" class="ll-form-field payment-field col-md-6" form-field-type="TEXT" column-span="1" format="ARBITRARY"><label class="field-label" for="sq-card-number">Card Number</label> 
+             <div class="input-container"> 
+              <input name="sq-card-number" id="sq-card-number" type="text" value="" class="form-control" placeholder=""> 
+             </div> 
+             <div class="field-note"></div><br style="clear:left;"> 
+             <div class="error-container"> 
+              <span class="error" for="sq-card-number"></span> 
+             </div><br style="clear:both;"></li> 
+            <li field-name="sq-cvv" class="ll-form-field payment-field col-md-6" form-field-type="TEXT" column-span="1" format="ARBITRARY"><label class="field-label" for="sq-cvv">CVV</label> 
+             <div class="input-container"> 
+              <input name="sq-cvv" id="sq-cvv" type="text" value="" class="form-control" placeholder=""> 
+             </div> 
+             <div class="field-note"></div><br style="clear:left;"> 
+             <div class="error-container"> 
+              <span class="error" for="sq-cvv"></span> 
+             </div><br style="clear:both;"></li> 
+            <li field-name="sq-expiration-date" class="ll-form-field payment-field col-md-6" form-field-type="TEXT" column-span="1" format="ARBITRARY"><label class="field-label" for="sq-expiration-date">Expiration Date</label> 
+             <div class="input-container"> 
+              <input name="sq-expiration-date" id="sq-expiration-date" type="text" value="" class="form-control" placeholder=""> 
+             </div> 
+             <div class="field-note"></div><br style="clear:left;"> 
+             <div class="error-container"> 
+              <span class="error" for="sq-expiration-date"></span> 
+             </div><br style="clear:both;"></li> 
+            <li field-name="sq-postal-code" class="ll-form-field payment-field col-md-6" form-field-type="TEXT" column-span="1" format="ARBITRARY"><label class="field-label" for="sq-postal-code">Zip Code</label> 
+             <div class="input-container"> 
+              <input name="sq-postal-code" id="sq-postal-code" type="text" value="" class="form-control" placeholder=""> 
+             </div> 
+             <div class="field-note"></div><br style="clear:left;"> 
+             <div class="error-container"> 
+              <span class="error" for="sq-postal-code"></span> 
+             </div><br style="clear:both;"></li> 
+            <input type="hidden" id="paymentNonce" name="paymentNonce" value="" class="ll-form-field"> 
+            <input type="hidden" id="token" name="token" value="" class="ll-form-field align-item" style=""> 
+           </ul> 
+          </div> 
+         </div> 
+         <div class="form-footer col-sm-10 col-sm-offset-1" style="text-align: center;"> 
+          <div ll-section="SUMMARY BOXES"> 
+           <div class="bg_black"> 
+            <div class="emptySessionSelectedDisplay"> 
+             <h3 class="text-uppercase" style="color:#fff;"> Select a program to continue </h3> 
+             <div class="payment_color"> 
+              <p style="color: #fff;margin-top: 20px;display: inline-block;">You must select a program on the calendar above to continue.</p> 
+             </div> 
+            </div> 
+            <div class="sessionSelectedDisplay" style="display:none;"> 
+             <h3 class="text-uppercase" style="color:#fff;"> your program details</h3> 
+             <div class="row"> 
+              <div class="col-lg-2 col-sm-3 col-xs-3 text-right"> 
+               <b>Program:</b> 
+              </div> 
+              <div class="col-lg-10 col-sm-9 col-xs-9 payment_color" id="sessionTitleDisplay">
+                Autocross 
+              </div> 
+             </div> 
+             <div class="row"> 
+              <div class="col-lg-2 col-sm-3 col-xs-3 text-right"> 
+               <b>Location:</b> 
+              </div> 
+              <div class="col-lg-10 col-sm-9 col-xs-9 payment_color" id="sessionLocationDisplay">
+                Citi Field 
+              </div> 
+             </div> 
+             <div class="row"> 
+              <div class="col-lg-2 col-sm-3 col-xs-3 text-right"> 
+               <b>Date:</b> 
+              </div> 
+              <div class="col-lg-10 col-sm-9 col-xs-9 payment_color" id="sessionDateDisplay">
+                Wednesday, January 3, 2018 
+              </div> 
+             </div> 
+             <div class="row"> 
+              <div class="col-lg-2 col-sm-3 col-xs-3 text-right"> 
+               <b>Time:</b> 
+              </div> 
+              <div class="col-lg-10 col-sm-9 col-xs-9 payment_color" id="sessionTimeDisplay">
+                10:00 AM - 4:00 PM 
+              </div> 
+             </div> 
+             <div class="row"> 
+              <div class="col-lg-2 col-sm-3 col-xs-3 text-right"> 
+               <b>Total Cost:</b> 
+              </div> 
+              <div class="col-lg-10 col-sm-9 col-xs-9 payment_color" id="sessionAmountDisplay"> 
+              </div> 
+             </div> 
+             <div class="row"> 
+              <div class="col-lg-2 col-sm-3 col-xs-3 text-right"> 
+               <b>Details:</b> 
+              </div> 
+              <div class="col-lg-10 col-sm-9 col-xs-9 payment_color" id="sessionDetailsDisplay">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <input ll-component="formSubmitButton" type="submit" id="formSubmitButton" class="form-button btn btn-block btn-solid" value="Complete Registration" tabindex="9" style=""> 
+         </div> 
+        </form> 
+       </div> 
+       <!-- /.form-contact --> 
+      </div> 
+      <!-- /.section-body --> 
+     </div> 
+     <!-- /.col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 --> 
+     <div ll-section="Submit" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 form-submitted-wrapper"> 
+      <div class="col-md-12" style=""> 
+       <div ll-component="formSubmitContent" class="" style=""> 
+        <h1 class="section-title" style="text-align: center;"><span style="font-family:arial,helvetica,sans-serif;">Thank You!<br> <br> <span style="font-size:12px;">You will receive an email with your activity details.</span></span><br> &nbsp;</h1> 
+        <div style="text-align: center;"> 
+         <!-- /.section-title --> 
+        </div> 
+        <p>&nbsp;</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- /.row --> 
+   </div> 
+   <!-- /.container-fluid --> 
+  </section> 
+  <!-- /.section-registration --> 
+  <footer class="footer" ll-section="footer"> 
+   <div class="row"> 
+    <div class="col-md-8 col-md-offset-2 col-sm-12"> 
+     <div class="socials"> 
+      <ul> 
+       <li><a href="https://www.facebook.com/BMWINDIA/" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/FACEBOOK.png"></a></li> 
+       <li><a href="https://twitter.com/BMWINDIA?ref_src=twsrc%5Eappleosx%7Ctwcamp%5Esafari%7Ctwgr%5Eprofile" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/TWITTER_white.png"></a></li> 
+       <li><a href="https://www.youtube.com/user/BMWINDIA" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/YOUTUBE_white.png"></a></li> 
+       <li><a href="https://www.instagram.com/bmwindia/?hl=en" target="_blank"><img ll-component="image" ll-optimalwidth="22" ll-optimalheight="22" alt="" src="https://s3.amazonaws.com/themes.limelightplatform.com/web/bmw/home_form/INSTAGRAM_white.png" style="width: 22px; height: 22px;"></a></li> 
+      </ul> 
+     </div> 
+     <nav class="nav-footer" ll-component="adhocCont"> 
+      <br> 
+      <br> Questions? Please call 1-800-558-4269 
+     </nav> 
+     <div class="footer-outro" ll-component="adhocCont"> 
+      <a href="http://www.bmwusa.com/standard/content/privacypolicy/" target="_blank">Privacy Policy</a> 
+      <a href="https://www.bmwusa.com/" target="_blank">© 2019 BMW of North America</a> 
+     </div> 
+     <!-- /.footer-outro --> 
+    </div> 
+    <!-- /.col-sm-4 col-sm-offset-4 --> 
+   </div> 
+   <!-- /.row --> 
+  </footer> 
+  <!-- /.footer --> 
+ </div> 
+ <!-- /.wrapper --> 
+</div>
+<input type="hidden" id="gaPropertyId" name="gaPropertyId" value="UA-53569123-25">
+<input type="hidden" id="gaViewId" name="gaViewId" value="105922431">
+<script>
+		$(document).ready(function() {
+			if(!window.parent.document.getElementById("advancedHtmlContent") && $("#gaPropertyId").val()) {
+				(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+				ga("create", $("#gaPropertyId").val(), "auto");
+				ga("send", "pageview");
+			}
+		});
+	</script>
+<script>
+function qs(key) {
+    key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+    var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+    return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+}
+
+
+$('document').ready(function() {
+	var name = 'token';
+	var token = qs(name);
+	if(token != null) {
+		$('#token').val(token);
+		/* document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC;  path=/"; */
+		$("ul.nav.navbar-nav > li > a").each(function(i){
+			var links = $(this).attr("href");
+		//	console.log(links);
+			$(this).attr("href", links + "?token=" + token);
+		});
+		$(".nav-footer > ul > li > a").each(function(i){
+			var links = $(this).attr("href");
+		//	console.log(links);
+			$(this).attr("href", links + "?token=" + token);
+		});
+        
+        //var logoLink = $(".navbar-brand").attr("href");
+        
+        //logoLink = logoLink.append("?token= + token);
+        
+        $(".navbar-brand").attr("href", $(".navbar-brand").attr("href") + "?token=" + token);
+	}
+});
+
+</script>
+<script type="text/javascript" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/calendar/fullcalendar.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/themes.limelightplatform.com/global/js/calendar/calendar-ude.js"></script>
+<script>
+    $(function(){
+    	$LL_CALENDAR.monthOfProgram = '2019-04-01';
+    });
+</script>
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '760226404025127');
+  fbq('track', 'PageView');
+
+  $(document).on( "completeRegistrationEvent", function() {
+  fbq('track', 'CompleteRegistration', {content_name: 'UDERegister'});
+  });
+
+</script>
+<div class="limelight-conditional-container" style="display:none"> 
+ <script type="text/javascript" id="formId">$LL_CONDITIONALS.fieldList = [{"id":448021,"fieldName":"sessionId","fieldType":"SESSION","conditionals":null,"engagementFieldId":396609},{"id":448022,"fieldName":"dateOfBirth","fieldType":"TEXT","conditionals":null,"engagementFieldId":396610},{"id":448023,"fieldName":"headerCompleteRegistration","fieldType":"SECTION_HEADER","conditionals":null,"engagementFieldId":396612},{"id":448024,"fieldName":"firstName","fieldType":"TEXT","conditionals":null,"engagementFieldId":396606},{"id":448025,"fieldName":"middleInitial","fieldType":"TEXT","conditionals":null,"engagementFieldId":396621},{"id":448026,"fieldName":"lastName","fieldType":"TEXT","conditionals":null,"engagementFieldId":396607},{"id":448027,"fieldName":"address","fieldType":"TEXT","conditionals":null,"engagementFieldId":396613},{"id":448028,"fieldName":"address2","fieldType":"TEXT","conditionals":null,"engagementFieldId":396622},{"id":448029,"fieldName":"city","fieldType":"TEXT","conditionals":null,"engagementFieldId":396614},{"id":448030,"fieldName":"state","fieldType":"DROPDOWN","conditionals":null,"engagementFieldId":396615},{"id":448031,"fieldName":"zip_code","fieldType":"TEXT","conditionals":null,"engagementFieldId":396636},{"id":448032,"fieldName":"email","fieldType":"TEXT","conditionals":null,"engagementFieldId":396608},{"id":448034,"fieldName":"cellPhone","fieldType":"TEXT","conditionals":null,"engagementFieldId":396616},{"id":448033,"fieldName":"homePhone","fieldType":"TEXT","conditionals":null,"engagementFieldId":396623},{"id":448035,"fieldName":"headerAdditonalInformation","fieldType":"SECTION_HEADER","conditionals":null,"engagementFieldId":396611},{"id":448037,"fieldName":"model_of_interest","fieldType":"DROPDOWN","conditionals":null,"engagementFieldId":396638},{"id":448120,"fieldName":"doYouHave_preferred_dealer","fieldType":"RADIO_BUTTON","conditionals":null,"engagementFieldId":396661},{"id":448121,"fieldName":"preferred_dealer_state","fieldType":"DROPDOWN","conditionals":{"argumentIds":[396661],"script":"{ var r={}; if (equalsTo(arg396661,'Yes')){r.required=true;r.hidden=false;} if (equalsTo(arg396661,'No')||isBlank(arg396661)){r.required=false;r.hidden=true;} return r;}","argumentNames":["arg396661"],"maintainSpacing":false},"engagementFieldId":396662},{"id":448036,"fieldName":"preferred_dealer","fieldType":"DROPDOWN","conditionals":{"argumentIds":[396661,396662],"script":"{ var r={}; if (equalsTo(arg396661,'Yes')){r.required=true;r.hidden=false;} if (equalsTo(arg396661,'No')||isBlank(arg396661)||isBlank(arg396662)){r.required=false;r.hidden=true;} return r;}","argumentNames":["arg396661","arg396662"],"maintainSpacing":false},"engagementFieldId":396637},{"id":448038,"fieldName":"headerOptIn","fieldType":"SECTION_HEADER","conditionals":null,"engagementFieldId":396617},{"id":448122,"fieldName":"opt_in_NA","fieldType":"SINGLE_CHECKBOX","conditionals":null,"engagementFieldId":396663},{"id":448123,"fieldName":"opt_in_dealer","fieldType":"SINGLE_CHECKBOX","conditionals":null,"engagementFieldId":396664},{"id":448124,"fieldName":"opt_in_text","fieldType":"SINGLE_CHECKBOX","conditionals":null,"engagementFieldId":396677},{"id":448043,"fieldName":"token","fieldType":"HIDDEN","conditionals":null,"engagementFieldId":396624}]</script> 
+</div>
+<div class="limelight-carousel-container" style="display:none"> 
+ <script type="text/javascript" id="formId"></script> 
+</div>
+<div class="limelight-site-tracker" style="display:none"> 
+ <input type="hidden" value="816" id="siteId"> 
+ <input type="hidden" value="//matomo.limelightplatform.com/" id="trackerUrl"> 
+ <input type="hidden" value="piwik.php" id="trackerHost"> 
+ <input type="hidden" value="registration" id="pageUrlName"> 
+</div>
